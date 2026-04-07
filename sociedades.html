@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="pags.sociedades_titulo">Sociedades — Sociedades360</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        'regal-blue': '#0F172A',
+                        'corporate-blue': '#1E293B',
+                        'ice-blue': '#38BDF8',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        .option-card.active {
+            background-color: rgba(56, 189, 248, 0.1) !important;
+            border-color: #38BDF8 !important;
+            box-shadow: 0 0 20px rgba(56, 189, 248, 0.15);
+        }
+        .option-card.active .check-dot { opacity: 1 !important; }
+    </style>
+</head>
+<body class="font-['Inter'] bg-white text-slate-900 dark:bg-[#0A1128] dark:text-white">
+
+       <!--NAV Y MENU BG-->
+       <nav class="bg-white dark:bg-[#0A1128] border-b border-slate-200 dark:border-white/10 fixed w-full z-[100] top-0 shadow-sm">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            
+            <div class="flex-shrink-0 relative z-[110]">
+                <a href="index.html">
+                    <span class="text-xl font-extrabold text-regal-blue dark:text-white tracking-tighter uppercase italic">
+                        Sociedades<span class="text-yellow-500">360</span>
+                    </span>
+                </a>
+            </div>
+    
+            <div class="hidden lg:flex space-x-8 items-center text-sm">
+                <a href="sociedades.html" data-i18n="nav.societaria" class="text-slate-600 dark:text-slate-400 hover:text-regal-blue dark:hover:text-ice-blue font-medium transition">Sociedades</a>
+                <a href="nosotros.html" data-i18n="nav.contacto" class="text-ice-blue font-bold">Nosotros</a>
+                
+                <a href="https://wa.me/5491159203177" target="_blank" data-i18n="nav.btn_consultar" class="bg-regal-blue dark:bg-white dark:text-regal-blue text-white px-6 py-2.5 rounded-lg font-bold hover:bg-ice-blue transition-all duration-300">
+                    CONSULTAR AHORA
+                </a>
+    
+                <div class="relative inline-block text-left">
+                    <button id="lang-menu-btn" class="flex items-center gap-2 px-4 py-2 bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-2xl">
+                        <span id="current-lang-flag" class="text-xs font-bold text-slate-800 dark:text-slate-200">AR</span>
+                        <span id="current-lang-text" class="text-sm font-black text-slate-900 dark:text-white uppercase">ES</span>
+                        <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div id="lang-dropdown" class="hidden absolute right-0 mt-2 w-32 bg-white dark:bg-[#0F172A] border border-slate-200 dark:border-white/10 rounded-2xl shadow-xl z-[120]">
+                        <div class="py-1">
+                            <button onclick="changeLanguage('es')" class="flex items-center gap-3 w-full px-4 py-2 text-sm font-bold text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5"><span>AR</span> ES</button>
+                            <button onclick="changeLanguage('en')" class="flex items-center gap-3 w-full px-4 py-2 text-sm font-bold text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5"><span>US</span> EN</button>
+                        </div>
+                    </div>
+                </div>
+    
+                <button id="theme-toggle" class="p-3 rounded-2xl bg-slate-100 dark:bg-white/10 border border-slate-200 dark:border-white/10 transition-all duration-300">🌙</button>
+            </div>
+    
+            <button id="menu-btn" class="lg:hidden text-regal-blue dark:text-white p-2 relative z-[110]">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path id="menu-path" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+    
+        <div id="mobile-menu" class="hidden fixed inset-0 z-[105] bg-white dark:bg-[#0A1128] flex flex-col items-center justify-center p-6 lg:hidden">
+            <div class="flex flex-col space-y-6 text-center w-full max-w-xs">
+                
+                <a href="sociedades.html" data-i18n="nav.societaria" class="text-3xl font-black text-regal-blue dark:text-white">Sociedades</a>
+                <a href="nosotros.html" data-i18n="nav.contacto" class="text-3xl font-black text-regal-blue dark:text-white">Nosotros</a>
+                
+                <div class="h-px w-full bg-slate-200 dark:bg-white/10 my-4"></div>
+    
+                <div class="flex flex-col gap-3">
+                    <p class="text-xs font-bold text-slate-400 uppercase tracking-widest">Seleccionar Idioma</p>
+                    <div class="flex justify-center gap-4">
+                        <button onclick="changeLanguage('es')" class="flex flex-col items-center gap-1 p-3 rounded-2xl bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 w-20">
+                            <span class="text-xs font-bold dark:text-white">AR</span>
+                            <span class="text-sm font-black text-regal-blue dark:text-ice-blue">ES</span>
+                        </button>
+                        <button onclick="changeLanguage('en')" class="flex flex-col items-center gap-1 p-3 rounded-2xl bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 w-20">
+                            <span class="text-xs font-bold dark:text-white">US</span>
+                            <span class="text-sm font-black text-regal-blue dark:text-ice-blue">EN</span>
+                        </button>
+                    </div>
+                </div>
+    
+                <div class="h-px w-full bg-slate-200 dark:bg-white/10 my-4"></div>
+                <a href="https://wa.me/5491159203177" target="_blank" class="bg-regal-blue dark:bg-white dark:text-regal-blue text-white px-8 py-4 rounded-2xl font-bold text-lg shadow-xl mt-4">
+                    CONSULTAR AHORA
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="min-h-screen pt-32 pb-20 relative overflow-hidden">
+        <div class="max-w-4xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-16">
+                <h1 class="text-5xl md:text-6xl font-black mb-6 tracking-tighter">
+                    <span data-i18n="form_p.title_1">Cotizá tu</span> 
+                    <span class="text-ice-blue" data-i18n="form_p.title_2">Sociedad</span>
+                </h1>
+            </div>
+
+            <div class="bg-white dark:bg-[#111930]/60 border border-slate-200 dark:border-white/10 p-8 md:p-14 rounded-[3rem] shadow-2xl">
+                
+                <div class="flex items-center gap-4 mb-14">
+                    <div data-i18n="step" class="text-slate-400 font-black text-xs uppercase">PASO <span id="step-number">01</span></div>
+                    <div class="flex-1 h-[2px] bg-slate-200 dark:bg-white/5 rounded-full">
+                        <div id="progress-line" class="h-full bg-ice-blue w-1/3 transition-all duration-500"></div>
+                    </div>
+                    <div class="text-slate-400 font-mono text-xs">03</div>
+                </div>
+
+                <div id="step1" class="step-content space-y-10">
+                    <div  class="grid grid-cols-1 md:grid-cols-3 gap-5">
+                        <div class="option-card group relative bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/5 p-8 rounded-3xl cursor-pointer transition-all" onclick="selectOption(this, 'society', 'SAS')">
+                            <div class="text-3xl mb-4">🚀</div>
+                            <h3 class="font-bold text-xl">S.A.S.</h3>
+                            <p data-i18n = "form_p.sas_desc" class="text-slate-500 text-xs">Agilidad tecnológica.</p>
+                            <div class="absolute top-4 right-4 w-2 h-2 rounded-full bg-ice-blue opacity-0 check-dot"></div>
+                        </div>
+                        <div class="option-card group relative bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/5 p-8 rounded-3xl cursor-pointer transition-all" onclick="selectOption(this, 'society', 'SRL')">
+                            <div class="text-3xl mb-4">🤝</div>
+                            <h3 class="font-bold text-xl">S.R.L.</h3>
+                            <p data-i18n = "form_p.srl_desc" class="text-slate-500 text-xs">Protección para socios.</p>
+                            <div class="absolute top-4 right-4 w-2 h-2 rounded-full bg-ice-blue opacity-0 check-dot"></div>
+                        </div>
+                        <div class="option-card group relative bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/5 p-8 rounded-3xl cursor-pointer transition-all" onclick="selectOption(this, 'society', 'SA')">
+                            <div class="text-3xl mb-4">🏢</div>
+                            <h3 data-i18n = "form_p.sa_desc" class="font-bold text-xl">S.A.</h3>
+                            <p class="text-slate-500 text-xs">Estructura robusta.</p>
+                            <div class="absolute top-4 right-4 w-2 h-2 rounded-full bg-ice-blue opacity-0 check-dot"></div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-6">
+                        <h3 data-i18n = "form_p.jurisdiction" class="text-slate-400 text-[10px] font-black uppercase tracking-widest">Jurisdicción</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                            <div class="option-card group relative bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/5 p-8 rounded-3xl cursor-pointer transition-all" onclick="selectOption(this, 'jurisdiction', 'CABA')">
+                                <h3 class="font-bold text-xl">CABA</h3><p class="text-slate-500 text-xs">IGJ</p>
+                                <div class="absolute top-4 right-4 w-2 h-2 rounded-full bg-ice-blue opacity-0 check-dot"></div>
+                            </div>
+                            <div class="option-card group relative bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/5 p-8 rounded-3xl cursor-pointer transition-all" onclick="selectOption(this, 'jurisdiction', 'PBA')">
+                                <h3 class="font-bold text-xl">PBA</h3><p class="text-slate-500 text-xs">DPPJ</p>
+                                <div class="absolute top-4 right-4 w-2 h-2 rounded-full bg-ice-blue opacity-0 check-dot"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-end pt-8 border-t border-slate-100 dark:border-white/5">
+                        <button data-i18n="form_p.next" id="toStep2" disabled onclick="nextStep()" class="bg-regal-blue dark:bg-white text-white dark:text-regal-blue px-10 py-4 rounded-2xl font-black uppercase text-xs opacity-20 cursor-not-allowed transition-all">Siguiente</button>
+                    </div>
+                </div>
+
+                <div id="step2" class="step-content hidden space-y-6">
+                    <div class="space-y-2">
+                        <label data-i18n = "form_p.capital_label" class="text-[10px] text-slate-400 uppercase tracking-widest">Capital Estimado (ARS)</label>
+                        <input type="text" id="capital" oninput="onCapitalInput()" placeholder="100.000" class="w-full bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-4 outline-none focus:border-ice-blue">
+                        <p id="capitalWarnText" class="text-[10px] text-ice-blue italic"></p>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="space-y-2">
+                            <label data-i18n="form_p.partners" class="text-[10px] text-slate-400 uppercase tracking-widest">Socios</label>
+                            <input type="number" id="partners" min="1" value="1" oninput="validarMinimo(this)" class="w-full bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-4 outline-none">
+                        </div>
+                        <div class="space-y-2">
+                            <label data-i18n="form_p.managers" class="text-[10px] text-slate-400 uppercase tracking-widest">Gerentes</label>
+                            <input type="number" id="managers" min="1" value="1" oninput="validarMinimo(this)" class="w-full bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-4 outline-none">
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <label data-i18n="form_p.activity_label" class="text-[10px] text-slate-400 uppercase tracking-widest">Actividad Principal</label>
+                        <input type="text" id="activity" placeholder="Ej: Exportación de software" class="w-full bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-4 outline-none focus:border-ice-blue">
+                    </div>
+                    <div class="flex flex-col gap-3 pt-4">
+                        <button data-i18n="form_p.continue" id="toStep3" onclick="nextStep()" class="w-full bg-regal-blue dark:bg-white text-white dark:text-regal-blue py-5 rounded-2xl font-black uppercase tracking-widest shadow-xl">Continuar</button>
+                        <button data-i18n="form_p.back" onclick="prevStep()" class="text-slate-400 text-[10px] font-black uppercase text-center">Atrás</button>
+                    </div>
+                </div>
+
+                <div id="step3" class="step-content hidden space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <input data-i18n="form_p.name_placeholder" type="text" id="userName" placeholder="Nombre completo" class="w-full bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-4 outline-none">
+                        <input  data-i18n="form_p.number_placeholder"="tel" id="userPhone" placeholder="WhatsApp: +54 9 11..." class="w-full bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-4 outline-none">
+                    </div>
+                    <input type="email" id="userEmail" placeholder="Email / Gmail" class="w-full bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-4 outline-none">
+                    <div class="space-y-2">
+                        <label data-i18n="form_p.summary_label" class="text-[10px] text-slate-400 uppercase tracking-widest ml-1">Resumen de solicitud</label>
+                        <textarea id="summary" readonly class="w-full bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-white/5 rounded-xl px-4 py-4 text-slate-600 dark:text-slate-300 text-xs h-40 resize-none focus:outline-none"></textarea>
+                    </div>
+                    <div class="flex flex-col gap-3">
+                        <button  onclick="sendWhatsApp()" data-i18n="form_p.send_btn" class="w-full bg-ice-blue text-regal-blue py-5 rounded-2xl font-black uppercase tracking-widest shadow-xl hover:opacity-90">Enviar por WhatsApp</button>
+                        <button data-i18n="form_p.modify_data" onclick="prevStep()" class="text-slate-400 text-[10px] font-black uppercase text-center">Modificar datos</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <script src="sociedades.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

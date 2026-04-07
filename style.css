@@ -1,0 +1,94 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+
+/*SOLUCIONES SOCIETARIAS*/
+
+.pt-40{
+    background: url(./img/fondo.jpg) no-repeat;
+    padding-top: 10rem;
+}
+
+/*gestoria societaria premium*/
+
+.text-center{
+     padding-top: 4rem ;
+     text-align: center;
+}
+
+.pt-20{
+    padding-top: 10rem;
+}
+
+
+/*solicitar respuesta*/
+.py{
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+
+
+
+/* Efecto elástico suave */
+    .cubic-bezier-spring {
+        transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    /* Pulso en el botón al hacer hover */
+    .group:hover a {
+        animation: pulse-border 1.5s infinite;
+    }
+
+    @keyframes pulse-border {
+        0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+        70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+        100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+    }
+
+
+
+/*whatsapp*/
+
+/* Keyframes para el efecto flotante suave */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Keyframes para el efecto de aura/pulso */
+@keyframes aura-pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.6;
+        }
+    100% {
+    transform: scale(1.6);
+    opacity: 0;
+    }
+}
+
+    /* Clases de utilidad para aplicar las animaciones */
+.animate-float {
+    animation: float 4s ease-in-out infinite;
+}
+
+.animate-aura {
+    position: absolute;
+    border-radius: 9999px; /* rounded-full */
+    background-color: #25D366; /* Color WhatsApp */
+    animation: aura-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    z-index: 0;
+    /* Para que el aura ocupe el mismo tamaño que el botón original */
+    inset: 0; 
+}
