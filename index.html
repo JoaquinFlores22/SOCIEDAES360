@@ -6,7 +6,7 @@
     <title>Sociedades360 - Gestoría Societaria Premium</title>
      <!-- Fonts -->
      <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    
+    <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -14,8 +14,9 @@
             theme: {
                 extend: {
                     colors: {
-                        'regal-blue': '#0F172A',
+                        'regal-blue': 'rgb(6, 17, 63)', 
                         'ice-blue': '#38BDF8',
+                        'off-white': 'rgb(242, 243, 243)',
                     }
                 }
             }
@@ -23,8 +24,33 @@
     </script>
     <style>
         html { scroll-behavior: smooth; }
-        body { transition: background-color 0.4s ease, color 0.4s ease; }
-        .hero-gradient { background: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%); }
+        body { 
+            transition: background-color 0.4s ease, color 0.4s ease;
+            background-color: rgb(242, 243, 243); /* Tu blanco exacto */
+        }
+        
+        /* --- EFECTO FILM NEGRO (EXCLUSIVE LOOK) --- */
+        /* Aplicamos el film directamente al ID 'inicio' para no tocar el HTML */
+        #inicio {
+            position: relative;
+            background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        /* Aseguramos que el contenido del hero sea legible sobre el film */
+        #inicio .max-w-7xl {
+            position: relative;
+            z-index: 10;
+        }
+
+        #inicio h1, #inicio p {
+            color: rgb(242, 243, 243) !important; /* Forzamos tu blanco para que resalte */
+            text-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        }
+
+        /* --- ANIMACIONES Y UI --- */
         @keyframes aura {
             0% { transform: scale(1); opacity: 0.5; }
             50% { transform: scale(1.4); opacity: 0; }
@@ -34,6 +60,16 @@
             position: absolute; inset: 0; background: #25D366;
             border-radius: 9999px; animation: aura 2s infinite;
         }
+
+        /* Ajuste de los bordes y sombras para tus nuevos colores */
+        .dark .group:hover {
+            box-shadow: 0 25px 50px -12px rgba(56, 189, 248, 0.15);
+        }
+
+        /* Scrollbar personalizada con tu azul */
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: rgb(242, 243, 243); }
+        ::-webkit-scrollbar-thumb { background: rgb(6, 17, 63); border-radius: 5px; }
     </style>
 </head>
 <body class="font-['Inter'] bg-white text-slate-900 dark:bg-[#0A1128] dark:text-white">
@@ -134,9 +170,9 @@
         </div>
     </section>
 
-    <section class="py-24 bg-slate-50 dark:bg-[#0A1128]/50 transition-colors duration-300">
+    <section class="py-24 bg-slate-50  transition-colors duration-300">
         <div class="max-w-7xl mx-auto px-6 text-center mb-16">
-            <h2 data-i18n="index_cards.badge" class="text-4xl md:text-5xl font-black tracking-tight mb-4 text-regal-blue dark:text-white">
+            <h2 data-i18n="index_cards.badge" class="text-4xl md:text-5xl font-black tracking-tight mb-4 text-regal-blue ">
                 Elegí tu estructura legal
             </h2>
             <p data-i18n="index_cards.sub" class="text-slate-500 dark:text-slate-400 max-w-2xl mx-auto italic">
@@ -145,35 +181,35 @@
         </div>
 
         <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
-            <a href="sociedades.html?type=SAS" class="group relative bg-white dark:bg-white/[0.03] border border-slate-200 dark:border-white/10 p-10 rounded-[3rem] transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-ice-blue/20">
+            <a href="sociedades.html?type=SAS" class="group relative bg-white dark:bg-white/[0.03] border border-slate-200 dark:border-white/10 p-10 rounded-[3rem] transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-ice-blue/20" style="background-color: rgb(10 17 40);">
                 <div class="text-5xl mb-6 transform group-hover:scale-110 transition-transform">🚀</div>
-                <h3 data-i18n="index_cards.sas_title" class="text-2xl font-black mb-3 text-regal-blue dark:text-white">S.A.S.</h3>
+                <h3 data-i18n="index_cards.sas_title" class="text-2xl font-black mb-3 text-regal-blue text-white">S.A.S.</h3>
                 <p data-i18n="index_cards.sas_text" class="text-slate-500 dark:text-slate-400 text-sm mb-8 leading-relaxed">
                     Ideal para emprendedores tecnológicos que buscan rapidez y digitalización.
                 </p>
-                <span data-i18n="index_cards.cta" class="text-ice-blue dark:text-white font-bold uppercase text-xs tracking-[0.2em] group-hover:tracking-[0.3em] transition-all">
+                <span data-i18n="index_cards.cta" class="text-ice-blue  font-bold uppercase text-xs tracking-[0.2em] group-hover:tracking-[0.3em] transition-all">
                     Cotizar ahora →
                 </span>
             </a>
 
-            <a href="sociedades.html?type=SRL" class="group relative bg-white dark:bg-white/[0.03] border border-slate-200 dark:border-white/10 p-10 rounded-[3rem] transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-ice-blue/20">
+            <a href="sociedades.html?type=SRL" class="group relative bg-white dark:bg-white/[0.03] border border-slate-200 dark:border-white/10 p-10 rounded-[3rem] transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-ice-blue/20" style="background-color: rgb(10 17 40);">
                 <div class="text-5xl mb-6 transform group-hover:scale-110 transition-transform">🤝</div>
-                <h3 data-i18n="index_cards.srl_title" class="text-2xl font-black mb-3 text-regal-blue dark:text-white">S.R.L.</h3>
+                <h3 data-i18n="index_cards.srl_title" class="text-2xl font-black mb-3 text-regal-blue text-white dark:text-white">S.R.L.</h3>
                 <p data-i18n="index_cards.srl_text" class="text-slate-500 dark:text-slate-400 text-sm mb-8 leading-relaxed">
                     La estructura clásica para PyMEs con protección total del patrimonio personal.
                 </p>
-                <span data-i18n="index_cards.cta" class="text-ice-blue dark:text-white font-bold uppercase text-xs tracking-[0.2em] group-hover:tracking-[0.3em] transition-all">
+                <span data-i18n="index_cards.cta" class="text-ice-blue font-bold uppercase text-xs tracking-[0.2em] group-hover:tracking-[0.3em] transition-all">
                     Cotizar ahora →
                 </span>
             </a>
 
-            <a href="sociedades.html?type=SA" class="group relative bg-white dark:bg-white/[0.03] border border-slate-200 dark:border-white/10 p-10 rounded-[3rem] transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-ice-blue/20">
+            <a href="sociedades.html?type=SA" class="group relative bg-white dark:bg-white/[0.03] border border-slate-200 dark:border-white/10 p-10 rounded-[3rem] transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-ice-blue/20" style="background-color: rgb(10 17 40);">
                 <div class="text-5xl mb-6 transform group-hover:scale-110 transition-transform">🏢</div>
-                <h3 data-i18n="index_cards.sa_title" class="text-2xl font-black mb-3 text-regal-blue dark:text-white">S.A.</h3>
-                <p data-i18n="index_cards.sa_text" class="text-slate-500 dark:text-slate-400 text-sm mb-8 leading-relaxed">
+                <h3 data-i18n="index_cards.sa_title" class="text-2xl font-black mb-3 text-white dark:text-white">S.A.</h3>
+                <p data-i18n="index_cards.sa_text" class="text-slate-500  text-sm mb-8 leading-relaxed">
                     Estructura corporativa robusta diseñada para grandes inversiones y socios variables.
                 </p>
-                <span data-i18n="index_cards.cta" class="text-ice-blue dark:text-white font-bold uppercase text-xs tracking-[0.2em] group-hover:tracking-[0.3em] transition-all">
+                <span data-i18n="index_cards.cta" class="text-ice-blue  font-bold uppercase text-xs tracking-[0.2em] group-hover:tracking-[0.3em] transition-all">
                     Cotizar ahora →
                 </span>
             </a>
