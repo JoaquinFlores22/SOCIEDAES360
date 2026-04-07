@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal Status | Sociedades360</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-navy': '#06113f',
+                        'brand-accent': '#38BDF8',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body { 
+            background-color: #06113f;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: #f2f3f3;
+        }
+
+        /* FONDO PARA WEB */
+        .hero-legal {
+            position: fixed;
+            inset: 0;
+            background-image: linear-gradient(rgba(6, 17, 63, 0.9), rgba(6, 17, 63, 0.9)), 
+                              url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&q=80');
+            background-size: cover;
+            z-index: -1;
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 30px;
+            margin-bottom: 20px;
+        }
+
+        /* --- OPTIMIZACIÓN EXCLUSIVA PARA EL PDF --- */
+        .pdf-mode {
+            background-color: #06113f !important; /* Fondo sólido para evitar transparencias fallidas */
+            color: #ffffff !important;
+            padding: 40px !important;
+        }
+
+        .pdf-mode .glass-panel {
+            background: rgba(255, 255, 255, 0.07) !important; /* Más opaco para el PDF */
+            border: 1px solid rgba(56, 189, 248, 0.5) !important;
+            break-inside: avoid; /* Evita que las tarjetas se corten entre páginas */
+        }
+
+        .pdf-mode h1, .pdf-mode h2, .pdf-mode .text-brand-accent {
+            color: #38BDF8 !important;
+            -webkit-print-color-adjust: exact;
+        }
+    </style>
+</head>
+
+<body class="antialiased">
+    <div class="hero-legal no-print"></div>
+
+    <nav class="fixed top-0 w-full z-[100] px-8 py-6 no-print">
+        <div class="max-w-7xl mx-auto flex justify-between items-center bg-white/5 backdrop-blur-xl border border-white/10 rounded-full px-8 py-4">
+            <span class="font-extrabold text-2xl italic text-white">Sociedades<span class="text-brand-accent">360</span></span>
+            <div class="flex items-center gap-6">
+                <button onclick="downloadPDF()" class="flex items-center gap-2 text-[10px] font-black uppercase text-brand-accent hover:text-white transition">
+                    DESCARGAR CONDICIONES (PDF)
+                </button>
+                <a href="index.html" class="bg-brand-accent text-brand-navy px-6 py-2 rounded-full text-[10px] font-bold uppercase transition">Volver</a>
+            </div>
+        </div>
+    </nav>
+
+    <main id="pdf-content" class="max-w-5xl mx-auto px-6 pt-44 pb-20">
+        
+        <header class="mb-16">
+            <h1 class="text-6xl font-extrabold tracking-tighter mb-4 text-white">Términos <br>& <span class="text-brand-accent">Privacidad</span></h1>
+            <p class="text-slate-400 text-lg">Estructura legal de Sociedades360. Actualización: 2026[cite: 2].</p>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="glass-panel p-8">
+                <span class="text-brand-accent font-bold text-xs uppercase tracking-widest mb-2 block text-glow">01. Gestión [cite: 3]</span>
+                <h2 class="text-2xl font-bold mb-4 text-white">Compromiso Operativo</h2>
+                <p class="text-slate-300 font-light leading-relaxed">Sociedades360 garantiza la ejecución técnica ante IGJ y DPPJ con seguimiento diario[cite: 5].</p>
+            </div>
+
+            <div class="glass-panel p-8">
+                <span class="text-brand-accent font-bold text-xs uppercase tracking-widest mb-2 block text-glow">02. Seguridad [cite: 4]</span>
+                <h2 class="text-2xl font-bold mb-4 text-white">Confidencialidad Elite</h2>
+                <p class="text-slate-300 font-light leading-relaxed">Información tratada bajo protocolos de cifrado. Sin cesión a terceros[cite: 6].</p>
+            </div>
+
+            <div class="glass-panel p-8 md:col-span-2 border-brand-accent/30 bg-brand-accent/5">
+                <h2 class="text-xl font-black italic text-brand-accent mb-2 uppercase">S360 Protection [cite: 7]</h2>
+                <p class="text-lg text-white font-light italic">"Convertimos su información en una estructura legal inatacable."</p>
+            </div>
+
+            <div class="glass-panel p-8">
+                <span class="text-brand-accent font-bold text-xs uppercase tracking-widest mb-2 block text-glow">03. Alcance [cite: 8]</span>
+                <h2 class="text-2xl font-bold mb-4 text-white">Responsabilidad</h2>
+                <p class="text-slate-300 font-light leading-relaxed">Agotamos instancias administrativas para reducir tiempos externos[cite: 10].</p>
+            </div>
+
+            <div class="glass-panel p-8">
+                <span class="text-brand-accent font-bold text-xs uppercase tracking-widest mb-2 block text-glow">04. Jurisdicción [cite: 9]</span>
+                <h2 class="text-2xl font-bold mb-4 text-white">Legales</h2>
+                <p class="text-slate-300 font-light leading-relaxed">Sometimiento exclusivo a Tribunales Comerciales de CABA[cite: 11].</p>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function downloadPDF() {
+            const element = document.getElementById('pdf-content');
+            
+            // Aplicamos clase de alto contraste temporalmente
+            element.classList.add('pdf-mode');
+
+            const opt = {
+                margin: 15,
+                filename: 'Condiciones-Sociedades360.pdf',
+                image: { type: 'jpeg', quality: 1 },
+                html2canvas: { 
+                    scale: 3, // Mayor escala = mayor nitidez de letras
+                    useCORS: true,
+                    backgroundColor: '#06113f'
+                },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            };
+
+            html2pdf().set(opt).from(element).save().then(() => {
+                // Quitamos la clase después de generar el PDF para que la web siga igual
+                element.classList.remove('pdf-mode');
+            });
+        }
+    </script>
+</body>
+</html>
