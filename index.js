@@ -165,9 +165,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (sociedadPrevia) {
         console.log("Auto-seleccionando sociedad:", sociedadPrevia);
 
-        // Esperamos un momento para que el DOM esté listo y las funciones cargadas
+
         setTimeout(() => {
-            // 1. Buscamos todas las option-cards del Paso 1
             const cards = document.querySelectorAll('#step1 .option-card');
             
             let cardEncontrada = null;
@@ -184,21 +183,16 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             if (cardEncontrada) {
-                // 2. Simulamos el clic en la tarjeta de la sociedad
                 cardEncontrada.click();
 
-                // 3. Opcional: Si quieres que además se elija una jurisdicción por defecto (ej: CABA)
-                // para que el botón "Siguiente" se habilite solo:
                 const cabaCard = Array.from(cards).find(c => c.innerText.includes('CABA'));
                 if (cabaCard) {
                     cabaCard.click();
                 }
-
-                // 4. Hacer scroll suave al formulario para que el usuario se ubique
+               
                 document.querySelector('main')?.scrollIntoView({ behavior: 'smooth' });
-                
                 console.log("Sociedad auto-seleccionada con éxito.");
             }
-        }, 600); // 600ms para asegurar que todo el JS previo cargó
+        }, 600); 
     }
 });
