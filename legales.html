@@ -1,161 +1,150 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aviso legal y privacidad | Sociedades360</title>
-    <meta name="description" content="Términos de uso, política de privacidad y aviso legal de Sociedades360.">
-    <link rel="canonical" href="https://www.sociedades360.com.ar/legales.html">
-    <meta name="robots" content="index, follow">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Sociedades360">
-    <meta property="og:locale" content="es_AR">
-    <meta property="og:title" content="Aviso legal y privacidad | Sociedades360">
-    <meta property="og:description" content="Términos de uso, política de privacidad y aviso legal de Sociedades360.">
-    <meta property="og:url" content="https://www.sociedades360.com.ar/legales.html">
-    <meta property="og:image" content="https://www.sociedades360.com.ar/img/og-cover.jpg">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0A1128" />
+  <title>Términos y privacidad — Sociedades360</title>
+  <meta name="description" content="Términos de uso, política de privacidad y aviso legal de Sociedades360, gestoría societaria en Argentina." />
+  <link rel="canonical" href="https://www.sociedades360.com.ar/legales.html" />
+  <meta name="robots" content="index, follow" />
 
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;700;800&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Sociedades360" />
+  <meta property="og:locale" content="es_AR" />
+  <meta property="og:title" content="Términos y privacidad — Sociedades360" />
+  <meta property="og:description" content="Términos de uso, política de privacidad y aviso legal de Sociedades360." />
+  <meta property="og:url" content="https://www.sociedades360.com.ar/legales.html" />
+  <meta property="og:image" content="https://www.sociedades360.com.ar/img/og-cover.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Términos y privacidad — Sociedades360" />
+  <meta name="twitter:description" content="Términos de uso, política de privacidad y aviso legal de Sociedades360." />
+  <meta name="twitter:image" content="https://www.sociedades360.com.ar/img/og-cover.jpg" />
 
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'brand-navy': '#06113f',
-                        'brand-accent': '#38BDF8',
-                    }
-                }
-            }
-        }
-    </script>
-    
-    <style>
-        body { 
-            background-color: #06113f;
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            color: #f2f3f3;
-        }
-
-        /* FONDO PARA WEB */
-        .hero-legal {
-            position: fixed;
-            inset: 0;
-            background-image: linear-gradient(rgba(6, 17, 63, 0.9), rgba(6, 17, 63, 0.9)), 
-                              url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&q=80');
-            background-size: cover;
-            z-index: -1;
-        }
-
-        .glass-panel {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(15px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 30px;
-            margin-bottom: 20px;
-        }
-
-        /* --- OPTIMIZACIÓN EXCLUSIVA PARA EL PDF --- */
-        .pdf-mode {
-            background-color: #06113f !important; /* Fondo sólido para evitar transparencias fallidas */
-            color: #ffffff !important;
-            padding: 40px !important;
-        }
-
-        .pdf-mode .glass-panel {
-            background: rgba(255, 255, 255, 0.07) !important; /* Más opaco para el PDF */
-            border: 1px solid rgba(56, 189, 248, 0.5) !important;
-            break-inside: avoid; /* Evita que las tarjetas se corten entre páginas */
-        }
-
-        .pdf-mode h1, .pdf-mode h2, .pdf-mode .text-brand-accent {
-            color: #38BDF8 !important;
-            -webkit-print-color-adjust: exact;
-        }
-    </style>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2306113F'/%3E%3Ctext x='32' y='43' font-family='Arial,Helvetica,sans-serif' font-size='30' font-weight='800' fill='%2338BDF8' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E" />
+  <link rel="preload" href="/fonts/inter-var-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="/dist/style.css" />
 </head>
 
-<body class="antialiased">
-    <div class="hero-legal no-print"></div>
+<body class="font-sans bg-white text-slate-900 dark:bg-ink dark:text-slate-100 antialiased">
 
-    <nav class="fixed top-0 w-full z-[100] px-8 py-6 no-print">
-        <div class="max-w-7xl mx-auto flex justify-between items-center bg-white/5 backdrop-blur-xl border border-white/10 rounded-full px-8 py-4">
-            <span class="font-extrabold text-2xl italic text-white">Sociedades<span class="text-brand-accent">360</span></span>
-            <div class="flex items-center gap-6">
-                <button onclick="downloadPDF()" class="flex items-center gap-2 text-[10px] font-black uppercase text-brand-accent hover:text-white transition">
-                    DESCARGAR CONDICIONES (PDF)
-                </button>
-                <a href="index.html" class="bg-brand-accent text-brand-navy px-6 py-2 rounded-full text-[10px] font-bold uppercase transition">Volver</a>
-            </div>
+  <!--#NAV-->
+  <nav class="fixed top-0 inset-x-0 z-50 bg-white/85 dark:bg-ink/85 backdrop-blur-lg border-b border-slate-200 dark:border-white/10">
+    <div class="max-w-content mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="index.html" class="text-lg font-black tracking-tighter uppercase italic text-regal dark:text-white">Sociedades<span class="text-gold">360</span></a>
+      <div class="hidden lg:flex items-center gap-7 text-sm font-medium">
+        <a href="sociedades.html" data-i18n="nav.societaria" class="link-underline text-slate-600 dark:text-slate-300 hover:text-regal dark:hover:text-white py-1">Sociedades</a>
+        <a href="nosotros.html" data-i18n="nav.contacto" class="link-underline text-slate-600 dark:text-slate-300 hover:text-regal dark:hover:text-white py-1">Nosotros</a>
+        <a href="portafolio.html" data-i18n="nav.portfolio" class="link-underline text-slate-600 dark:text-slate-300 hover:text-regal dark:hover:text-white py-1">Portafolio</a>
+        <a href="sociedades.html" data-i18n="nav.btn_consultar" class="bg-regal text-white dark:bg-ice dark:text-regal px-5 py-2 rounded-lg font-bold hover:opacity-90 transition">Cotizar</a>
+        <div class="relative">
+          <button type="button" id="lang-menu-btn" aria-label="Cambiar idioma" class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 text-xs font-bold">
+            <span data-lang-flag class="text-slate-500 dark:text-slate-400">AR</span>
+            <span data-lang-code class="text-slate-900 dark:text-white">ES</span>
+            <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </button>
+          <div id="lang-dropdown" class="hidden absolute right-0 mt-2 w-28 rounded-xl bg-white dark:bg-surface border border-slate-200 dark:border-white/10 shadow-xl overflow-hidden">
+            <button type="button" onclick="changeLanguage('es')" class="w-full text-left px-4 py-2.5 text-sm font-bold hover:bg-slate-100 dark:hover:bg-white/5">AR · ES</button>
+            <button type="button" onclick="changeLanguage('en')" class="w-full text-left px-4 py-2.5 text-sm font-bold hover:bg-slate-100 dark:hover:bg-white/5">US · EN</button>
+          </div>
         </div>
-    </nav>
+        <button type="button" data-theme-toggle aria-label="Cambiar tema" class="w-9 h-9 rounded-xl bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 text-sm leading-none">🌙</button>
+      </div>
+      <button type="button" id="menu-btn" aria-expanded="false" aria-controls="mobile-menu" aria-label="Abrir menú" class="lg:hidden p-2 -mr-2 text-regal dark:text-white">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path id="menu-path" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden fixed inset-x-0 top-16 bottom-0 z-40 bg-white dark:bg-ink lg:hidden flex flex-col p-6">
+      <a href="sociedades.html" data-i18n="nav.societaria" class="text-2xl font-black py-4 border-b border-slate-100 dark:border-white/10">Sociedades</a>
+      <a href="nosotros.html" data-i18n="nav.contacto" class="text-2xl font-black py-4 border-b border-slate-100 dark:border-white/10">Nosotros</a>
+      <a href="portafolio.html" data-i18n="nav.portfolio" class="text-2xl font-black py-4 border-b border-slate-100 dark:border-white/10">Portafolio</a>
+      <a href="sociedades.html" data-i18n="nav.btn_consultar" class="mt-6 bg-regal text-white dark:bg-ice dark:text-regal text-center px-6 py-4 rounded-xl font-bold text-lg">Cotizar</a>
+      <div class="mt-6 flex gap-3">
+        <button type="button" onclick="changeLanguage('es')" class="flex-1 py-3 rounded-xl bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 font-bold text-sm">AR · ES</button>
+        <button type="button" onclick="changeLanguage('en')" class="flex-1 py-3 rounded-xl bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 font-bold text-sm">US · EN</button>
+        <button type="button" data-theme-toggle aria-label="Cambiar tema" class="w-14 rounded-xl bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10">🌙</button>
+      </div>
+    </div>
+  </nav>
 
-    <main id="pdf-content" class="max-w-5xl mx-auto px-6 pt-44 pb-20">
-        
-        <header class="mb-16">
-            <h1 class="text-6xl font-extrabold tracking-tighter mb-4 text-white">Términos <br>& <span class="text-brand-accent">Privacidad</span></h1>
-            <p class="text-slate-400 text-lg">Estructura legal de Sociedades360. Actualización: 2026[cite: 2].</p>
-        </header>
+  <main class="max-w-3xl mx-auto px-6 pt-28 pb-20 md:pt-36">
+    <header>
+      <h1 class="text-4xl md:text-5xl font-black tracking-tight text-regal dark:text-white">Términos y privacidad</h1>
+      <p class="mt-3 text-sm text-slate-500 dark:text-slate-400">Última actualización: agosto 2026. Aplica al sitio y a los servicios de Sociedades360.</p>
+    </header>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div class="glass-panel p-8">
-                <span class="text-brand-accent font-bold text-xs uppercase tracking-widest mb-2 block text-glow">01. Gestión [cite: 3]</span>
-                <h2 class="text-2xl font-bold mb-4 text-white">Compromiso Operativo</h2>
-                <p class="text-slate-300 font-light leading-relaxed">Sociedades360 garantiza la ejecución técnica ante IGJ y DPPJ con seguimiento diario[cite: 5].</p>
-            </div>
+    <div class="mt-12 space-y-10">
+      <section>
+        <h2 class="text-xl font-bold text-regal dark:text-white">1. Alcance del servicio</h2>
+        <p class="mt-3 text-slate-600 dark:text-slate-300 leading-relaxed">Sociedades360 presta servicios de gestoría societaria: constitución de sociedades (SAS, SRL, SA), rúbrica de libros, reformas de estatuto y trámites ante la IGJ y la DPPJ. La cotización enviada por el sitio es orientativa y no constituye una oferta contractual hasta su confirmación.</p>
+      </section>
+      <section>
+        <h2 class="text-xl font-bold text-regal dark:text-white">2. Uso del cotizador</h2>
+        <p class="mt-3 text-slate-600 dark:text-slate-300 leading-relaxed">Los datos que ingresás en el cotizador (tipo de sociedad, jurisdicción, capital, cantidad de socios y gerentes, actividad y datos de contacto) se utilizan para elaborar tu presupuesto y coordinar la gestión. Al enviar el formulario aceptás ser contactado por WhatsApp o correo electrónico.</p>
+      </section>
+      <section>
+        <h2 class="text-xl font-bold text-regal dark:text-white">3. Privacidad y datos personales</h2>
+        <p class="mt-3 text-slate-600 dark:text-slate-300 leading-relaxed">Tratamos tus datos conforme a la Ley 25.326 de Protección de Datos Personales. Los datos no se ceden a terceros ajenos a la prestación del servicio. Podés solicitar el acceso, la rectificación o la supresión de tus datos escribiéndonos por los canales de contacto.</p>
+      </section>
+      <section>
+        <h2 class="text-xl font-bold text-regal dark:text-white">4. Responsabilidad</h2>
+        <p class="mt-3 text-slate-600 dark:text-slate-300 leading-relaxed">Agotamos las instancias administrativas a nuestro alcance para reducir los tiempos de gestión. Los plazos finales dependen de organismos externos (IGJ, DPPJ, AFIP) y pueden variar. Sociedades360 no responde por demoras o requerimientos originados en dichos organismos.</p>
+      </section>
+      <section>
+        <h2 class="text-xl font-bold text-regal dark:text-white">5. Jurisdicción</h2>
+        <p class="mt-3 text-slate-600 dark:text-slate-300 leading-relaxed">Toda controversia se somete a los Tribunales Ordinarios en lo Comercial de la Ciudad Autónoma de Buenos Aires, con renuncia a cualquier otro fuero.</p>
+      </section>
+      <section>
+        <h2 class="text-xl font-bold text-regal dark:text-white">6. Contacto</h2>
+        <p class="mt-3 text-slate-600 dark:text-slate-300 leading-relaxed">Por consultas sobre estos términos o sobre el tratamiento de tus datos, escribinos por <a href="https://wa.me/5491159203177" target="_blank" rel="noopener noreferrer" class="text-ice hover:text-ice-deep font-semibold">WhatsApp</a> o a través de <a href="https://www.instagram.com/sociedades360" target="_blank" rel="noopener noreferrer" class="text-ice hover:text-ice-deep font-semibold">Instagram</a>.</p>
+      </section>
+    </div>
+  </main>
 
-            <div class="glass-panel p-8">
-                <span class="text-brand-accent font-bold text-xs uppercase tracking-widest mb-2 block text-glow">02. Seguridad [cite: 4]</span>
-                <h2 class="text-2xl font-bold mb-4 text-white">Confidencialidad Elite</h2>
-                <p class="text-slate-300 font-light leading-relaxed">Información tratada bajo protocolos de cifrado. Sin cesión a terceros[cite: 6].</p>
-            </div>
+  <!--#FOOTER-->
+  <footer class="border-t border-slate-200 dark:border-white/10 bg-white dark:bg-ink">
+    <div class="max-w-content mx-auto px-6 py-16 grid gap-12 md:grid-cols-4">
+      <div class="md:col-span-2">
+        <div class="text-2xl font-black tracking-tighter uppercase italic text-regal dark:text-white">Sociedades<span class="text-gold">360</span></div>
+        <p data-i18n="footer.description" class="mt-4 max-w-sm text-sm text-slate-500 dark:text-slate-400 leading-relaxed">Seguridad jurídica para el crecimiento de tu empresa. Transformamos la complejidad legal en una ventaja competitiva para PyMEs y emprendedores.</p>
+        <a href="https://www.instagram.com/sociedades360" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Sociedades360" class="mt-6 inline-flex w-10 h-10 items-center justify-center rounded-xl bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 text-slate-500 dark:text-slate-300 hover:text-ice hover:border-ice/40 transition">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 01-1.38-.9 3.7 3.7 0 01-.9-1.38c-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16zm0 1.8c-3.15 0-3.5.01-4.74.07-1.14.05-1.76.24-2.17.4-.55.21-.94.47-1.35.88-.41.41-.67.8-.88 1.35-.16.41-.35 1.03-.4 2.17-.06 1.24-.07 1.6-.07 4.74s.01 3.5.07 4.74c.05 1.14.24 1.76.4 2.17.21.55.47.94.88 1.35.41.41.8.67 1.35.88.41.16 1.03.35 2.17.4 1.24.06 1.6.07 4.74.07s3.5-.01 4.74-.07c1.14-.05 1.76-.24 2.17-.4.55-.21.94-.47 1.35-.88.41-.41.67-.8.88-1.35.16-.41.35-1.03.4-2.17.06-1.24.07-1.6.07-4.74s-.01-3.5-.07-4.74c-.05-1.14-.24-1.76-.4-2.17a3.6 3.6 0 00-.88-1.35 3.6 3.6 0 00-1.35-.88c-.41-.16-1.03-.35-2.17-.4-1.24-.06-1.6-.07-4.74-.07zm0 3.06a5.98 5.98 0 110 11.96 5.98 5.98 0 010-11.96zm0 9.86a3.88 3.88 0 100-7.76 3.88 3.88 0 000 7.76zm7.6-10.09a1.4 1.4 0 11-2.8 0 1.4 1.4 0 012.8 0z" /></svg>
+        </a>
+      </div>
+      <div>
+        <h3 data-i18n="footer.nav_title" class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-4">Navegación</h3>
+        <ul class="space-y-2.5 text-sm text-slate-500 dark:text-slate-400">
+          <li><a href="sociedades.html" data-i18n="nav.societaria" class="hover:text-ice transition">Sociedades</a></li>
+          <li><a href="nosotros.html" data-i18n="nav.contacto" class="hover:text-ice transition">Nosotros</a></li>
+          <li><a href="portafolio.html" data-i18n="portfolio.title" class="hover:text-ice transition">Portafolio</a></li>
+          <li><a href="sociedades.html" data-i18n="footer.link_quote" class="hover:text-ice transition">Cotizar</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 data-i18n="footer.legal_title" class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-4">Legal</h3>
+        <ul class="space-y-2.5 text-sm text-slate-500 dark:text-slate-400">
+          <li><a href="legales.html" data-i18n="footer.link_privacy" class="hover:text-ice transition">Privacidad</a></li>
+          <li><a href="legales.html" data-i18n="footer.link_terms" class="hover:text-ice transition">Términos</a></li>
+        </ul>
+        <h3 data-i18n="footer.office_title" class="mt-8 text-xs font-bold uppercase tracking-widest text-slate-400 mb-4">Oficina</h3>
+        <p class="text-sm text-slate-500 dark:text-slate-400"><span data-i18n="footer.oficina">CABA, Buenos Aires</span> · <span data-i18n="footer.pais">Argentina</span></p>
+      </div>
+    </div>
+    <div class="border-t border-slate-200 dark:border-white/10">
+      <div class="max-w-content mx-auto px-6 py-5 flex flex-wrap items-center justify-between gap-3 text-[11px] uppercase tracking-widest text-slate-400">
+        <span>© <span data-year>2026</span> Sociedades360</span>
+        <a href="https://desarrollodigital.vercel.app" target="_blank" rel="noopener noreferrer" class="hover:text-ice transition">Dev · Estudio Flores</a>
+      </div>
+    </div>
+  </footer>
 
-            <div class="glass-panel p-8 md:col-span-2 border-brand-accent/30 bg-brand-accent/5">
-                <h2 class="text-xl font-black italic text-brand-accent mb-2 uppercase">S360 Protection [cite: 7]</h2>
-                <p class="text-lg text-white font-light italic">"Convertimos su información en una estructura legal inatacable."</p>
-            </div>
+  <a href="https://wa.me/5491159203177?text=Hola%20Sociedades360%2C%20quiero%20hacer%20una%20consulta." target="_blank" rel="noopener noreferrer" aria-label="Escribir por WhatsApp" class="fixed bottom-6 right-6 z-40 w-14 h-14 grid place-items-center rounded-full bg-[#25D366] text-white shadow-2xl hover:scale-110 transition-transform">
+    <span class="wa-aura"></span>
+    <svg class="relative w-7 h-7 fill-current" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12.05 21.785h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413" /></svg>
+  </a>
 
-            <div class="glass-panel p-8">
-                <span class="text-brand-accent font-bold text-xs uppercase tracking-widest mb-2 block text-glow">03. Alcance [cite: 8]</span>
-                <h2 class="text-2xl font-bold mb-4 text-white">Responsabilidad</h2>
-                <p class="text-slate-300 font-light leading-relaxed">Agotamos instancias administrativas para reducir tiempos externos[cite: 10].</p>
-            </div>
-
-            <div class="glass-panel p-8">
-                <span class="text-brand-accent font-bold text-xs uppercase tracking-widest mb-2 block text-glow">04. Jurisdicción [cite: 9]</span>
-                <h2 class="text-2xl font-bold mb-4 text-white">Legales</h2>
-                <p class="text-slate-300 font-light leading-relaxed">Sometimiento exclusivo a Tribunales Comerciales de CABA[cite: 11].</p>
-            </div>
-        </div>
-    </main>
-
-    <script>
-        function downloadPDF() {
-            const element = document.getElementById('pdf-content');
-            
-            // Aplicamos clase de alto contraste temporalmente
-            element.classList.add('pdf-mode');
-
-            const opt = {
-                margin: 15,
-                filename: 'Condiciones-Sociedades360.pdf',
-                image: { type: 'jpeg', quality: 1 },
-                html2canvas: { 
-                    scale: 3, // Mayor escala = mayor nitidez de letras
-                    useCORS: true,
-                    backgroundColor: '#06113f'
-                },
-                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
-            };
-
-            html2pdf().set(opt).from(element).save().then(() => {
-                // Quitamos la clase después de generar el PDF para que la web siga igual
-                element.classList.remove('pdf-mode');
-            });
-        }
-    </script>
+  <script src="assets/app.js" defer></script>
 </body>
 </html>

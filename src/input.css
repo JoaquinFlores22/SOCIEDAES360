@@ -1,0 +1,117 @@
+/* Inter — self-hosted variable (latin). Antes: Google Fonts CDN (render-blocking). */
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("/fonts/inter-var-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
+    U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+  body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+    -webkit-font-smoothing: antialiased;
+    text-wrap: pretty;
+  }
+  ::selection {
+    background: theme("colors.ice");
+    color: theme("colors.regal");
+  }
+  :focus-visible {
+    outline: 2px solid theme("colors.ice");
+    outline-offset: 2px;
+  }
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: theme("colors.ink");
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #26314f;
+    border-radius: 5px;
+  }
+}
+
+@layer components {
+  /* Superficie de vidrio (antes definida inline y distinta en cada página) */
+  .glass {
+    background: rgba(255, 255, 255, 0.72);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(15, 23, 42, 0.08);
+  }
+  .dark .glass {
+    background: rgba(255, 255, 255, 0.03);
+    border-color: rgba(255, 255, 255, 0.08);
+  }
+
+  /* Fondo de puntos sutil */
+  .bg-grid {
+    background-image: radial-gradient(
+      circle at 1px 1px,
+      rgba(56, 189, 248, 0.09) 1px,
+      transparent 0
+    );
+    background-size: 42px 42px;
+  }
+
+  /* Aura del botón de WhatsApp */
+  .wa-aura {
+    position: absolute;
+    inset: 0;
+    border-radius: 9999px;
+    background: #25d366;
+    animation: aura 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    z-index: 0;
+  }
+
+  /* Link con subrayado animado */
+  .link-underline {
+    background: linear-gradient(currentColor, currentColor) 0 100% / 0 1.5px
+      no-repeat;
+    transition: background-size 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .link-underline:hover,
+  .link-underline[aria-current="page"] {
+    background-size: 100% 1.5px;
+  }
+
+  /* Card de opción del cotizador (estado seleccionado lo pone el JS) */
+  .option-card {
+    cursor: pointer;
+    transition: border-color 0.2s, background-color 0.2s, box-shadow 0.2s;
+  }
+  .option-card.is-active {
+    border-color: theme("colors.ice") !important;
+    background-color: rgba(56, 189, 248, 0.1) !important;
+    box-shadow: 0 0 0 1px theme("colors.ice"), 0 8px 30px rgba(56, 189, 248, 0.12);
+  }
+  .option-card.is-active .check-dot {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}

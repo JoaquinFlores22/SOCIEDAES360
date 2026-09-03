@@ -1,270 +1,204 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="pags.sobre_nosotros">Nosotros — Sociedades360 | Gestoría societaria en Argentina</title>
-    <meta name="description" content="Quiénes somos en Sociedades360: profesionales que simplifican el derecho corporativo para emprendedores y PyMEs. Estructuras jurídicas pensadas para escalar.">
-    <link rel="canonical" href="https://www.sociedades360.com.ar/nosotros.html">
-    <meta name="robots" content="index, follow">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Sociedades360">
-    <meta property="og:locale" content="es_AR">
-    <meta property="og:title" content="Nosotros — Sociedades360">
-    <meta property="og:description" content="Profesionales que simplifican el derecho corporativo para emprendedores y PyMEs en Argentina.">
-    <meta property="og:url" content="https://www.sociedades360.com.ar/nosotros.html">
-    <meta property="og:image" content="https://www.sociedades360.com.ar/img/og-cover.jpg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Nosotros — Sociedades360">
-    <meta name="twitter:description" content="Profesionales que simplifican el derecho corporativo para emprendedores y PyMEs.">
-    <meta name="twitter:image" content="https://www.sociedades360.com.ar/img/og-cover.jpg">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        'regal-blue': '#0F172A',
-                        'ice-blue': '#38BDF8',
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        html { scroll-behavior: smooth; }
-        body { transition: background-color 0.3s ease, color 0.3s ease; }
-        .glass { background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.05); }
-        .bg-grid { background-image: radial-gradient(circle at 2px 2px, rgba(56, 189, 248, 0.05) 1px, transparent 0); background-size: 40px 40px; }
-        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
-        .animate-float { animation: float 4s ease-in-out infinite; }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0A1128" />
+  <title>Nosotros — Sociedades360 | Gestoría societaria en Argentina</title>
+  <meta name="description" content="Quiénes somos en Sociedades360: profesionales que simplifican el derecho corporativo para emprendedores y PyMEs. Estructuras jurídicas pensadas para escalar." />
+  <link rel="canonical" href="https://www.sociedades360.com.ar/nosotros.html" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Sociedades360" />
+  <meta property="og:locale" content="es_AR" />
+  <meta property="og:title" content="Nosotros — Sociedades360" />
+  <meta property="og:description" content="Profesionales que simplifican el derecho corporativo para emprendedores y PyMEs en Argentina." />
+  <meta property="og:url" content="https://www.sociedades360.com.ar/nosotros.html" />
+  <meta property="og:image" content="https://www.sociedades360.com.ar/img/og-cover.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Nosotros — Sociedades360" />
+  <meta name="twitter:description" content="Profesionales que simplifican el derecho corporativo para emprendedores y PyMEs." />
+  <meta name="twitter:image" content="https://www.sociedades360.com.ar/img/og-cover.jpg" />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2306113F'/%3E%3Ctext x='32' y='43' font-family='Arial,Helvetica,sans-serif' font-size='30' font-weight='800' fill='%2338BDF8' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E" />
+  <link rel="preload" href="/fonts/inter-var-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="/dist/style.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.sociedades360.com.ar/" },
+      { "@type": "ListItem", "position": 2, "name": "Nosotros", "item": "https://www.sociedades360.com.ar/nosotros.html" }
+    ]
+  }
+  </script>
 </head>
-<body class="font-['Inter'] bg-white text-slate-900 dark:bg-[#0A1128] dark:text-white bg-grid">
 
-    <!--NAV Y MENU BG-->
-    <nav class="bg-white dark:bg-[#0A1128] border-b border-slate-200 dark:border-white/10 fixed w-full z-[100] top-0 shadow-sm">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
-            
-            <div class="flex-shrink-0 relative z-[110]">
-                <a href="index.html">
-                    <span class="text-xl font-extrabold text-regal-blue dark:text-white tracking-tighter uppercase italic">
-                        Sociedades<span class="text-yellow-500">360</span>
-                    </span>
-                </a>
-            </div>
-    
-            <div class="hidden lg:flex space-x-8 items-center text-sm">
-                <a href="sociedades.html" data-i18n="nav.societaria" class="text-slate-600 dark:text-slate-400 hover:text-regal-blue dark:hover:text-ice-blue font-medium transition">Sociedades</a>
-                <a href="nosotros.html" data-i18n="nav.contacto" class="text-ice-blue font-bold">Nosotros</a>
-                
-                <a href="https://wa.me/5491159203177" target="_blank" data-i18n="nav.btn_consultar" class="bg-regal-blue dark:bg-white dark:text-regal-blue text-white px-6 py-2.5 rounded-lg font-bold hover:bg-ice-blue transition-all duration-300">
-                    CONSULTAR AHORA
-                </a>
-    
-                <div class="relative inline-block text-left">
-                    <button id="lang-menu-btn" class="flex items-center gap-2 px-4 py-2 bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-2xl">
-                        <span id="current-lang-flag" class="text-xs font-bold text-slate-800 dark:text-slate-200">AR</span>
-                        <span id="current-lang-text" class="text-sm font-black text-slate-900 dark:text-white uppercase">ES</span>
-                        <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                    </button>
-                    <div id="lang-dropdown" class="hidden absolute right-0 mt-2 w-32 bg-white dark:bg-[#0F172A] border border-slate-200 dark:border-white/10 rounded-2xl shadow-xl z-[120]">
-                        <div class="py-1">
-                            <button onclick="changeLanguage('es')" class="flex items-center gap-3 w-full px-4 py-2 text-sm font-bold text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5"><span>AR</span> ES</button>
-                            <button onclick="changeLanguage('en')" class="flex items-center gap-3 w-full px-4 py-2 text-sm font-bold text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5"><span>US</span> EN</button>
-                        </div>
-                    </div>
-                </div>
-    
-                <button id="theme-toggle" class="p-3 rounded-2xl bg-slate-100 dark:bg-white/10 border border-slate-200 dark:border-white/10 transition-all duration-300">🌙</button>
-            </div>
-    
-            <button id="menu-btn" class="lg:hidden text-regal-blue dark:text-white p-2 relative z-[110]">
-                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path id="menu-path" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                </svg>
-            </button>
+<body class="font-sans bg-white text-slate-900 dark:bg-ink dark:text-slate-100 antialiased">
+
+  <!--#NAV-->
+  <nav class="fixed top-0 inset-x-0 z-50 bg-white/85 dark:bg-ink/85 backdrop-blur-lg border-b border-slate-200 dark:border-white/10">
+    <div class="max-w-content mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="index.html" class="text-lg font-black tracking-tighter uppercase italic text-regal dark:text-white">Sociedades<span class="text-gold">360</span></a>
+      <div class="hidden lg:flex items-center gap-7 text-sm font-medium">
+        <a href="sociedades.html" data-i18n="nav.societaria" class="link-underline text-slate-600 dark:text-slate-300 hover:text-regal dark:hover:text-white py-1">Sociedades</a>
+        <a href="nosotros.html" data-i18n="nav.contacto" aria-current="page" class="link-underline text-ice py-1">Nosotros</a>
+        <a href="portafolio.html" data-i18n="nav.portfolio" class="link-underline text-slate-600 dark:text-slate-300 hover:text-regal dark:hover:text-white py-1">Portafolio</a>
+        <a href="sociedades.html" data-i18n="nav.btn_consultar" class="bg-regal text-white dark:bg-ice dark:text-regal px-5 py-2 rounded-lg font-bold hover:opacity-90 transition">Cotizar</a>
+        <div class="relative">
+          <button type="button" id="lang-menu-btn" aria-label="Cambiar idioma" class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 text-xs font-bold">
+            <span data-lang-flag class="text-slate-500 dark:text-slate-400">AR</span>
+            <span data-lang-code class="text-slate-900 dark:text-white">ES</span>
+            <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </button>
+          <div id="lang-dropdown" class="hidden absolute right-0 mt-2 w-28 rounded-xl bg-white dark:bg-surface border border-slate-200 dark:border-white/10 shadow-xl overflow-hidden">
+            <button type="button" onclick="changeLanguage('es')" class="w-full text-left px-4 py-2.5 text-sm font-bold hover:bg-slate-100 dark:hover:bg-white/5">AR · ES</button>
+            <button type="button" onclick="changeLanguage('en')" class="w-full text-left px-4 py-2.5 text-sm font-bold hover:bg-slate-100 dark:hover:bg-white/5">US · EN</button>
+          </div>
         </div>
-    
-        <div id="mobile-menu" class="hidden fixed inset-0 z-[105] bg-white dark:bg-[#0A1128] flex flex-col items-center justify-center p-6 lg:hidden">
-            <div class="flex flex-col space-y-6 text-center w-full max-w-xs">
-                
-                <a href="sociedades.html" data-i18n="nav.societaria" class="text-3xl font-black text-regal-blue dark:text-white">Sociedades</a>
-                <a href="nosotros.html" data-i18n="nav.contacto" class="text-3xl font-black text-regal-blue dark:text-white">Nosotros</a>
-                
-                <div class="h-px w-full bg-slate-200 dark:bg-white/10 my-4"></div>
-    
-                <div class="flex flex-col gap-3">
-                    <p class="text-xs font-bold text-slate-400 uppercase tracking-widest">Seleccionar Idioma</p>
-                    <div class="flex justify-center gap-4">
-                        <button onclick="changeLanguage('es')" class="flex flex-col items-center gap-1 p-3 rounded-2xl bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 w-20">
-                            <span class="text-xs font-bold dark:text-white">AR</span>
-                            <span class="text-sm font-black text-regal-blue dark:text-ice-blue">ES</span>
-                        </button>
-                        <button onclick="changeLanguage('en')" class="flex flex-col items-center gap-1 p-3 rounded-2xl bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 w-20">
-                            <span class="text-xs font-bold dark:text-white">US</span>
-                            <span class="text-sm font-black text-regal-blue dark:text-ice-blue">EN</span>
-                        </button>
-                    </div>
-                </div>
-    
-                <div class="h-px w-full bg-slate-200 dark:bg-white/10 my-4"></div>
-                <a href="https://wa.me/5491159203177" target="_blank" class="bg-regal-blue dark:bg-white dark:text-regal-blue text-white px-8 py-4 rounded-2xl font-bold text-lg shadow-xl mt-4">
-                    CONSULTAR AHORA
-                </a>
-            </div>
-        </div>
-    </nav>
-
-    <main class="relative" style="background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80)">
-        <section class="pt-40 pb-20 px-6">
-            <div class="max-w-6xl mx-auto">
-                <div class="flex flex-col md:flex-row items-center gap-12">
-                    <div class="md:w-1/2 space-y-6">
-                        <span data-i18n="about_p.badge" class="px-4 py-1.5 rounded-full border border-ice-blue/20 bg-ice-blue/5 text-ice-blue text-[10px] font-black uppercase tracking-[0.3em]">
-                            Nuestra Identidad
-                        </span>
-                        <h1 class="text-5xl md:text-7xl font-black tracking-tighter leading-[0.95]">
-                            <span data-i18n="about_p.hero_title">La base legal de </span>
-                            <span data-i18n="about_p.hero_span" class="text-transparent bg-clip-text bg-gradient-to-r from-ice-blue to-blue-500">Los negocios que crecen</span>
-                        </h1>
-                        <p data-i18n="about_p.hero_desc" class="text-slate-500 dark:text-slate-400 text-lg font-light leading-relaxed">
-                            En Sociedades360 transformamos trámites complejos en soluciones simples.
-                            Diseñamos estructuras jurídicas pensadas para escalar, no solo para cumplir.
-                        </p>
-                    </div>
-                    <div class="md:w-1/2 relative">
-                        <div class="absolute inset-0 bg-ice-blue/20 blur-[100px] rounded-full"></div>
-                        <div class="glass p-8 rounded-[3rem] relative z-10 animate-float border-white/10">
-                            <div class="flex items-center gap-4 mb-6">
-                                <div class="w-12 h-12 rounded-2xl bg-ice-blue flex items-center justify-center text-2xl">⚖️</div>
-                                <div>
-                                    <h4 class="font-bold text-lg">Sociedades 360°</h4>
-                                    <p class="text-xs text-slate-400">Consultas societarias</p>
-                                </div>
-                            </div>
-                            <div class="space-y-4">
-                                <div class="h-2 w-full bg-white/5 rounded-full overflow-hidden">
-                                    <div class="h-full bg-ice-blue w-[100%]"></div>
-                                </div>
-                                <div class="flex justify-between text-[10px] uppercase font-bold tracking-widest opacity-60">
-                                    <span data-i18n="about_p.card_status">Gestiones societarias </span>
-                                    <span>100%</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="py-24 bg-slate-50 dark:bg-white/[0.02] border-y border-slate-200 dark:border-white/5">
-            <div class="max-w-7xl mx-auto px-6">
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="space-y-4">
-                        <div class="text-3xl">🛡️</div>
-                        <h3 data-i18n="about_p.val_title_1" class="text-xl font-bold italic">Confianza Transparente</h3>
-                        <p data-i18n="about_p.val_desc_1" class="text-slate-500 text-sm leading-relaxed">Eliminamos las "letras chicas". Cada paso de nuestro asesoramiento es claro, directo y honesto.</p>
-                    </div>
-                    <div class="space-y-4">
-                        <div class="text-3xl">⚡</div>
-                        <h3 data-i18n="about_p.val_title_2" class="text-xl font-bold italic">Velocidad Tecnológica</h3>
-                        <p data-i18n="about_p.val_desc_2" class="text-slate-500 text-sm leading-relaxed">Utilizamos herramientas digitales de última generación para reducir tiempos de espera de semanas a días.</p>
-                    </div>
-                    <div class="space-y-4">
-                        <div class="text-3xl">🎯</div>
-                        <h3 data-i18n="about_p.val_title_3" class="text-xl font-bold italic">Enfoque Personalizado</h3>
-                        <p data-i18n="about_p.val_desc_3" class="text-slate-500 text-sm leading-relaxed">Cada cliente es un proyecto único. No vendemos formularios, creamos soluciones a medida.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="py-32 px-6 relative overflow-hidden bg-[#0A1128]">
-             <div class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-ice-blue/10 rounded-full blur-[120px] pointer-events-none"></div>
-             <div class="max-w-4xl mx-auto text-center space-y-8">
-                <h2 data-i18n="about_p.mission" class="text-4xl md:text-5xl font-black tracking-tight italic text-white">
-                    "Nuestra misión es que lo legal deje de ser un obstáculo y se convierta en una ventaja competitiva"
-                </h2>
-                <div class="w-20 h-1 bg-ice-blue mx-auto"></div>
-                <p data-i18n="about_p.mission_desc" class="text-slate-500 dark:text-slate-300 text-xl font-light italic">
-                  Fundada por profesionales, Sociedades360 nace para simplificar el derecho corporativo y adaptarlo a las necesidades de emprendedores y empresas en Argentina.
-                </p>
-                <div class="pt-8">
-                    <a href="https://wa.me/5491159203177" data-i18n="about_p.btn_cta" class="text-regal-blue bg-white dark:bg-white dark:text-regal-blue px-10 py-4 rounded-2xl font-black uppercase tracking-widest text-xs hover:scale-105 transition-all">
-                        Hablemos de tu proyecto
-                    </a>
-                </div>
-             </div>
-        </section>
-    </main>
-
-    <footer class="bg-white dark:bg-[#0A1128] border-t border-slate-200 dark:border-white/10 pt-16 pb-8">
-        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-5 gap-12 text-center md:text-left">
-            <div class="md:col-span-2">
-                <div class="text-3xl font-black italic mb-8 uppercase">Sociedades<span class="text-yellow-500">360</span></div>
-                <p data-i18n="footer.description" class="text-slate-500 max-w-sm mb-8">Seguridad jurídica de élite para el crecimiento de tu empresa. Transformamos la complejidad legal en una ventaja competitiva para las PyMEs y los próximos unicornios de la región.</p>
-                <div class="flex gap-4">
-                    <a href="#" class="w-10 h-10 glass rounded-xl flex items-center justify-center hover:bg-ice-blue transition-colors">LN</a>
-                    <a href="https://www.instagram.com/sociedades360" class="w-10 h-10 glass rounded-xl flex items-center justify-center hover:bg-ice-blue transition-colors">IG</a>
-                </div>
-            </div>
-            <div>
-                <h4 data-i18n="footer.nav_title" class="text-regal-blue font-bold text-xs uppercase tracking-widest mb-6 dark:text-white italic">Navegación</h4>
-                <ul class="space-y-3 text-sm text-slate-500">
-                    <li><a href="#" data-i18n="footer.link_services" class="hover:text-ice-blue transition">Servicios</a></li>
-                    <li><a href="#" data-i18n="footer.link_contact" class="hover:text-ice-blue transition">Contacto</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 data-i18n="footer.office_title" class="text-regal-blue dark:text-white font-bold text-xs uppercase mb-6">Oficina</h4>
-                <p class="text-sm text-slate-500 dark:text-slate-400">
-                    <span data-i18n="footer.oficina">CABA, Buenos Aires</span><br>
-                    <span data-i18n="footer.pais">Argentina</span>
-                </p>
-            </div>
-            <div>
-                <h4 data-i18n="footer.legal_title" class="text-regal-blue font-bold text-xs uppercase tracking-widest mb-6 dark:text-white italic">Legal</h4>
-                <ul class="space-y-3 text-sm text-slate-500">
-                    <li><a href="#" data-i18n="footer.link_privacy" class="hover:text-ice-blue transition">Privacidad</a></li>
-                    <li><a href="#" data-i18n="footer.link_terms" class="hover:text-ice-blue transition">Términos</a></li>
-                </ul>
-            </div>
-            
-            <div>
-                <p data-i18n="footer.copyright" class="text-[10px] text-slate-400 uppercase">© 2026 Sociedades 360.</p>
-                <a href="https://github.com/JoaquinFlores22" target="_blank" class="text-[10px] text-slate-400 hover:text-ice-blue transition uppercase tracking-widest">Dev by Joaquín Flores</a>
-            </div>
-        </div>
-    </footer>
-
-    <div class="fixed bottom-8 right-8 flex items-center group z-[100] p-2 animate-float">
-        <div class="opacity-0 -translate-x-4 pointer-events-none invisible 
-            group-hover:opacity-100 group-hover:translate-x-0 group-hover:pointer-events-auto group-hover:visible 
-            transition-all duration-500 ease-out mr-3">
-            <div class="glass px-6 py-3 rounded-2xl shadow-2xl border border-white/20">
-                <span data-i18n="about_p.wa_bubble" class="text-dark dark:text-white font-bold tracking-tight text-sm whitespace-nowrap">
-                    <span data-i18n="about_p.wa_bubble">¿Necesitás asesoramiento? Escribinos</span>
-                </span>
-                <div class="absolute -right-1.5 top-1/2 -translate-y-1/2 w-3 h-3 bg-white/10 dark:bg-[#0A1128]/50 backdrop-blur-xl border-r border-t border-white/20 rotate-45"></div>
-            </div>
-        </div>
-
-        <div class="relative w-16 h-16">
-            <div class="animate-aura"></div>
-            <a href="https://wa.me/5491159203177" target="_blank" rel="noopener noreferrer" 
-               class="w-16 h-16 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-all duration-300 relative z-10 bg-[#25D366] text-white dark:bg-white dark:text-[#25D366]">
-                <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
-                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.414 0 0 5.414 0 12.05c0 2.123.552 4.197 1.602 6.02L0 24l6.137-1.611a11.774 11.774 0 005.904 1.562h.005c6.635 0 12.05-5.414 12.05-12.05 0-3.212-1.25-6.232-3.522-8.505z"/>
-                </svg>
-            </a>
-        </div>
+        <button type="button" data-theme-toggle aria-label="Cambiar tema" class="w-9 h-9 rounded-xl bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 text-sm leading-none">🌙</button>
+      </div>
+      <button type="button" id="menu-btn" aria-expanded="false" aria-controls="mobile-menu" aria-label="Abrir menú" class="lg:hidden p-2 -mr-2 text-regal dark:text-white">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path id="menu-path" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg>
+      </button>
     </div>
+    <div id="mobile-menu" class="hidden fixed inset-x-0 top-16 bottom-0 z-40 bg-white dark:bg-ink lg:hidden flex flex-col p-6">
+      <a href="sociedades.html" data-i18n="nav.societaria" class="text-2xl font-black py-4 border-b border-slate-100 dark:border-white/10">Sociedades</a>
+      <a href="nosotros.html" data-i18n="nav.contacto" class="text-2xl font-black py-4 border-b border-slate-100 dark:border-white/10">Nosotros</a>
+      <a href="portafolio.html" data-i18n="nav.portfolio" class="text-2xl font-black py-4 border-b border-slate-100 dark:border-white/10">Portafolio</a>
+      <a href="sociedades.html" data-i18n="nav.btn_consultar" class="mt-6 bg-regal text-white dark:bg-ice dark:text-regal text-center px-6 py-4 rounded-xl font-bold text-lg">Cotizar</a>
+      <div class="mt-6 flex gap-3">
+        <button type="button" onclick="changeLanguage('es')" class="flex-1 py-3 rounded-xl bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 font-bold text-sm">AR · ES</button>
+        <button type="button" onclick="changeLanguage('en')" class="flex-1 py-3 rounded-xl bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 font-bold text-sm">US · EN</button>
+        <button type="button" data-theme-toggle aria-label="Cambiar tema" class="w-14 rounded-xl bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10">🌙</button>
+      </div>
+    </div>
+  </nav>
 
-    <script src="index.js"></script>
+  <main>
+    <!-- HERO -->
+    <section class="relative overflow-hidden bg-grid bg-slate-50 dark:bg-ink pt-28 pb-20 md:pt-36 md:pb-24">
+      <div class="pointer-events-none absolute -top-40 -left-40 w-[560px] h-[560px] rounded-full bg-ice/10 blur-[140px]"></div>
+      <div class="max-w-content mx-auto px-6 grid lg:grid-cols-2 gap-14 items-center">
+        <div>
+          <span data-i18n="about_p.badge" class="inline-flex rounded-full border border-ice/30 bg-ice/10 px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.2em] text-ice-deep dark:text-ice">Nuestra identidad</span>
+          <h1 class="mt-6 text-4xl sm:text-5xl font-black tracking-tight leading-[1.08] text-regal dark:text-white">
+            <span data-i18n="about_p.hero_title">La base legal de </span>
+            <span data-i18n="about_p.hero_span" class="text-ice">los negocios que crecen.</span>
+          </h1>
+          <p data-i18n="about_p.hero_desc" class="mt-6 max-w-lg text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
+            En Sociedades360 transformamos trámites complejos en soluciones simples. Diseñamos estructuras jurídicas pensadas para escalar, no solo para cumplir.
+          </p>
+          <div class="mt-8 flex flex-wrap gap-4">
+            <a href="sociedades.html" data-i18n="nav.btn_consultar" class="bg-regal text-white dark:bg-ice dark:text-regal px-7 py-3.5 rounded-xl font-bold hover:opacity-90 transition">Cotizar</a>
+            <a href="https://wa.me/5491159203177" target="_blank" rel="noopener noreferrer" data-i18n="about_p.btn_cta" class="px-7 py-3.5 rounded-xl font-bold border border-slate-300 dark:border-white/15 text-slate-700 dark:text-white hover:bg-white dark:hover:bg-white/5 transition">Hablemos de tu proyecto</a>
+          </div>
+        </div>
+        <div class="glass rounded-3xl p-7 shadow-2xl">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-2xl bg-ice text-regal grid place-items-center text-2xl">⚖️</div>
+            <div>
+              <p class="font-bold text-regal dark:text-white">Sociedades 360°</p>
+              <p class="text-xs text-slate-500 dark:text-slate-400">Consultas societarias</p>
+            </div>
+          </div>
+          <div class="mt-6 space-y-4">
+            <div class="flex items-center justify-between text-sm"><span class="text-slate-600 dark:text-slate-300">Constituciones gestionadas</span><span class="font-black text-regal dark:text-white">+120</span></div>
+            <div class="flex items-center justify-between text-sm"><span class="text-slate-600 dark:text-slate-300">Jurisdicciones</span><span class="font-black text-regal dark:text-white">IGJ · DPPJ</span></div>
+            <div class="flex items-center justify-between text-sm"><span class="text-slate-600 dark:text-slate-300">Seguimiento</span><span class="font-black text-emerald-500 dark:text-emerald-400">Diario</span></div>
+          </div>
+          <div class="mt-6 border-t border-slate-200 dark:border-white/10 pt-4">
+            <div class="h-2 rounded-full bg-slate-200 dark:bg-white/10"><div class="h-full rounded-full bg-ice w-full"></div></div>
+            <p class="mt-2 text-[11px] uppercase tracking-widest text-slate-500 dark:text-slate-400" data-i18n="about_p.card_status">Gestiones societarias · 100%</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VALORES -->
+    <section class="bg-white dark:bg-surface border-y border-slate-200 dark:border-white/10">
+      <div class="max-w-content mx-auto px-6 py-20 md:py-24 grid gap-10 md:grid-cols-3">
+        <div>
+          <div class="w-12 h-12 rounded-xl bg-ice/15 text-ice grid place-items-center text-2xl">🛡️</div>
+          <h2 data-i18n="about_p.val_title_1" class="mt-5 text-xl font-bold text-regal dark:text-white">Confianza transparente</h2>
+          <p data-i18n="about_p.val_desc_1" class="mt-2 text-sm text-slate-600 dark:text-slate-300 leading-relaxed">Eliminamos la "letra chica". Cada paso del asesoramiento es claro, directo y honesto.</p>
+        </div>
+        <div>
+          <div class="w-12 h-12 rounded-xl bg-ice/15 text-ice grid place-items-center text-2xl">⚡</div>
+          <h2 data-i18n="about_p.val_title_2" class="mt-5 text-xl font-bold text-regal dark:text-white">Velocidad tecnológica</h2>
+          <p data-i18n="about_p.val_desc_2" class="mt-2 text-sm text-slate-600 dark:text-slate-300 leading-relaxed">Herramientas digitales de última generación para reducir los tiempos de espera de semanas a días.</p>
+        </div>
+        <div>
+          <div class="w-12 h-12 rounded-xl bg-ice/15 text-ice grid place-items-center text-2xl">🎯</div>
+          <h2 data-i18n="about_p.val_title_3" class="mt-5 text-xl font-bold text-regal dark:text-white">Enfoque personalizado</h2>
+          <p data-i18n="about_p.val_desc_3" class="mt-2 text-sm text-slate-600 dark:text-slate-300 leading-relaxed">Cada cliente es un proyecto único. No vendemos formularios: creamos soluciones a medida.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MISION -->
+    <section class="relative overflow-hidden bg-regal dark:bg-ink">
+      <div class="pointer-events-none absolute -bottom-40 right-0 w-[500px] h-[500px] rounded-full bg-ice/10 blur-[130px]"></div>
+      <div class="relative max-w-3xl mx-auto px-6 py-24 md:py-28 text-center">
+        <blockquote data-i18n="about_p.mission" class="text-3xl md:text-4xl font-black tracking-tight italic leading-snug text-white">
+          "Nuestra misión es que lo legal deje de ser un obstáculo y se convierta en una ventaja competitiva."
+        </blockquote>
+        <div class="mx-auto mt-8 h-1 w-16 rounded-full bg-ice"></div>
+        <p data-i18n="about_p.mission_desc" class="mt-8 text-lg font-light italic text-white/70">
+          Fundada por profesionales, Sociedades360 nace para simplificar el derecho corporativo y adaptarlo a las necesidades de emprendedores y empresas en Argentina.
+        </p>
+        <a href="sociedades.html" data-i18n="about_p.btn_cta" class="mt-10 inline-block bg-ice text-regal px-8 py-4 rounded-xl font-black uppercase tracking-widest text-sm hover:scale-105 transition-transform">Hablemos de tu proyecto</a>
+      </div>
+    </section>
+  </main>
+
+  <!--#FOOTER-->
+  <footer class="border-t border-slate-200 dark:border-white/10 bg-white dark:bg-ink">
+    <div class="max-w-content mx-auto px-6 py-16 grid gap-12 md:grid-cols-4">
+      <div class="md:col-span-2">
+        <div class="text-2xl font-black tracking-tighter uppercase italic text-regal dark:text-white">Sociedades<span class="text-gold">360</span></div>
+        <p data-i18n="footer.description" class="mt-4 max-w-sm text-sm text-slate-500 dark:text-slate-400 leading-relaxed">Seguridad jurídica para el crecimiento de tu empresa. Transformamos la complejidad legal en una ventaja competitiva para PyMEs y emprendedores.</p>
+        <a href="https://www.instagram.com/sociedades360" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Sociedades360" class="mt-6 inline-flex w-10 h-10 items-center justify-center rounded-xl bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 text-slate-500 dark:text-slate-300 hover:text-ice hover:border-ice/40 transition">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 01-1.38-.9 3.7 3.7 0 01-.9-1.38c-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16zm0 1.8c-3.15 0-3.5.01-4.74.07-1.14.05-1.76.24-2.17.4-.55.21-.94.47-1.35.88-.41.41-.67.8-.88 1.35-.16.41-.35 1.03-.4 2.17-.06 1.24-.07 1.6-.07 4.74s.01 3.5.07 4.74c.05 1.14.24 1.76.4 2.17.21.55.47.94.88 1.35.41.41.8.67 1.35.88.41.16 1.03.35 2.17.4 1.24.06 1.6.07 4.74.07s3.5-.01 4.74-.07c1.14-.05 1.76-.24 2.17-.4.55-.21.94-.47 1.35-.88.41-.41.67-.8.88-1.35.16-.41.35-1.03.4-2.17.06-1.24.07-1.6.07-4.74s-.01-3.5-.07-4.74c-.05-1.14-.24-1.76-.4-2.17a3.6 3.6 0 00-.88-1.35 3.6 3.6 0 00-1.35-.88c-.41-.16-1.03-.35-2.17-.4-1.24-.06-1.6-.07-4.74-.07zm0 3.06a5.98 5.98 0 110 11.96 5.98 5.98 0 010-11.96zm0 9.86a3.88 3.88 0 100-7.76 3.88 3.88 0 000 7.76zm7.6-10.09a1.4 1.4 0 11-2.8 0 1.4 1.4 0 012.8 0z" /></svg>
+        </a>
+      </div>
+      <div>
+        <h3 data-i18n="footer.nav_title" class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-4">Navegación</h3>
+        <ul class="space-y-2.5 text-sm text-slate-500 dark:text-slate-400">
+          <li><a href="sociedades.html" data-i18n="nav.societaria" class="hover:text-ice transition">Sociedades</a></li>
+          <li><a href="nosotros.html" data-i18n="nav.contacto" class="hover:text-ice transition">Nosotros</a></li>
+          <li><a href="portafolio.html" data-i18n="portfolio.title" class="hover:text-ice transition">Portafolio</a></li>
+          <li><a href="sociedades.html" data-i18n="footer.link_quote" class="hover:text-ice transition">Cotizar</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 data-i18n="footer.legal_title" class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-4">Legal</h3>
+        <ul class="space-y-2.5 text-sm text-slate-500 dark:text-slate-400">
+          <li><a href="legales.html" data-i18n="footer.link_privacy" class="hover:text-ice transition">Privacidad</a></li>
+          <li><a href="legales.html" data-i18n="footer.link_terms" class="hover:text-ice transition">Términos</a></li>
+        </ul>
+        <h3 data-i18n="footer.office_title" class="mt-8 text-xs font-bold uppercase tracking-widest text-slate-400 mb-4">Oficina</h3>
+        <p class="text-sm text-slate-500 dark:text-slate-400"><span data-i18n="footer.oficina">CABA, Buenos Aires</span> · <span data-i18n="footer.pais">Argentina</span></p>
+      </div>
+    </div>
+    <div class="border-t border-slate-200 dark:border-white/10">
+      <div class="max-w-content mx-auto px-6 py-5 flex flex-wrap items-center justify-between gap-3 text-[11px] uppercase tracking-widest text-slate-400">
+        <span>© <span data-year>2026</span> Sociedades360</span>
+        <a href="https://desarrollodigital.vercel.app" target="_blank" rel="noopener noreferrer" class="hover:text-ice transition">Dev · Estudio Flores</a>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/5491159203177?text=Hola%20Sociedades360%2C%20quiero%20hacer%20una%20consulta." target="_blank" rel="noopener noreferrer" aria-label="Escribir por WhatsApp" class="fixed bottom-6 right-6 z-40 w-14 h-14 grid place-items-center rounded-full bg-[#25D366] text-white shadow-2xl hover:scale-110 transition-transform">
+    <span class="wa-aura"></span>
+    <svg class="relative w-7 h-7 fill-current" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12.05 21.785h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413" /></svg>
+  </a>
+
+  <script src="assets/app.js" defer></script>
 </body>
 </html>

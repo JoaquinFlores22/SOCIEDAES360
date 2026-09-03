@@ -1,0 +1,15 @@
+{
+  "name": "sociedades360",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sociedades360 — gestoría societaria. Sitio estático (HTML + Tailwind compilado).",
+  "scripts": {
+    "build:css": "tailwindcss -i ./src/input.css -o ./dist/style.css --minify",
+    "watch:css": "tailwindcss -i ./src/input.css -o ./dist/style.css --watch",
+    "dev": "npm run watch:css & python -m http.server 5500",
+    "serve": "python -m http.server 5500"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}
