@@ -10,13 +10,13 @@ assets/app.js       chrome compartido (nav, tema, idioma, i18n)
 assets/cotizador.js cotizador de 3 pasos (solo sociedades.html)
 locales/{es,en}.json textos i18n — fuente de verdad del copy
 src/input.css       fuente del CSS (Tailwind + @font-face + componentes)
-dist/style.css      CSS compilado — ESTO es lo que sirve el sitio
+css/style.css      CSS compilado — ESTO es lo que sirve el sitio
 fonts/              Inter self-hosteada
 ```
 
 ## Editar y compilar
 
-El CSS de Tailwind está **precompilado** en `dist/style.css`. Si tocás clases de
+El CSS de Tailwind está **precompilado** en `css/style.css`. Si tocás clases de
 Tailwind en el HTML, hay que recompilar:
 
 ```bash
