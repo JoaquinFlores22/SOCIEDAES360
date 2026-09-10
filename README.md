@@ -34,4 +34,7 @@ Los **textos** se editan en `locales/es.json` / `locales/en.json`, no en el HTML
 
 - WhatsApp: `5491159203177` (en `assets/*.js` y en los `href` de los HTML).
 - Leads del cotizador: Google Apps Script (`SHEETS_URL` en `assets/cotizador.js`),
-  vía `navigator.sendBeacon`.
+  vía `fetch` GET fire-and-forget contra el `/exec`. El código del script y los
+  pasos para (re)implementarlo están en `apps-script/Codigo.gs`.
+  Si los leads dejan de llegar a la planilla, casi siempre es porque la
+  implementación quedó con "Quién tiene acceso" != "Cualquier persona".

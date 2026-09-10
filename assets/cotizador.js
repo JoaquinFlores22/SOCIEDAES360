@@ -152,10 +152,13 @@ function saveLead() {
       t: Date.now().toString(),
     });
     const url = `${SHEETS_URL}?${params.toString()}`;
-    // sendBeacon: no bloquea la navegación y entra por connect-src en el CSP.
-    if (!navigator.sendBeacon || !navigator.sendBeacon(url)) {
-      fetch(url, { mode: "no-cors", keepalive: true }).catch(() => {});
-    }
+    // GET fire-and-forget: pega en doGet(e) del Apps Script (e.parameter trae
+    // todos estos campos). keepalive por si el navegador intenta cancelarlo al
+    // abrir WhatsApp. Antes esto usaba navigator.sendBeacon(url), que manda un
+    // POST sin body: Google lo rechaza con 411 y el lead nunca llegaba.
+    fetch(url, { method: "GET", mode: "no-cors", keepalive: true }).catch(() => {
+      new Image().src = url;
+    });
   } catch (e) {
     console.error("lead:", e);
   }
