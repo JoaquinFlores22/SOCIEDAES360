@@ -11,6 +11,8 @@ module.exports = {
     "opacity-100",
     "cursor-not-allowed",
     "is-active",
+    "text-emerald-400",
+    "text-amber-400",
   ],
   theme: {
     extend: {

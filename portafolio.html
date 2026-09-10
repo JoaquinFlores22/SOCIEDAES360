@@ -3,6 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Google Ads — solo en el dominio de producción (no en el demo del portfolio) -->
+  <script>
+    (function () {
+      if (!/(^|\.)sociedades360\.com\.ar$/i.test(location.hostname)) return;
+      var s = document.createElement("script");
+      s.async = true;
+      s.src = "https://www.googletagmanager.com/gtag/js?id=AW-18407054038";
+      document.head.appendChild(s);
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function () { dataLayer.push(arguments); };
+      gtag("js", new Date());
+      gtag("config", "AW-18407054038");
+    })();
+  </script>
   <meta name="theme-color" content="#0A1128" />
   <title>Portafolio — Sociedades360 | Sociedades constituidas</title>
   <meta name="description" content="Registro de sociedades (SAS, SRL y SA) constituidas y en gestión por Sociedades360 para emprendedores y PyMEs en Argentina." />
@@ -167,9 +181,14 @@
       <div class="md:col-span-2">
         <div class="text-2xl font-black tracking-tighter uppercase italic text-regal dark:text-white">Sociedades<span class="text-gold">360</span></div>
         <p data-i18n="footer.description" class="mt-4 max-w-sm text-sm text-slate-500 dark:text-slate-400 leading-relaxed">Seguridad jurídica para el crecimiento de tu empresa. Transformamos la complejidad legal en una ventaja competitiva para PyMEs y emprendedores.</p>
-        <a href="https://www.instagram.com/sociedades360" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Sociedades360" class="mt-6 inline-flex w-10 h-10 items-center justify-center rounded-xl bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 text-slate-500 dark:text-slate-300 hover:text-ice hover:border-ice/40 transition">
+        <div class="mt-6 flex gap-3">
+        <a href="https://www.linkedin.com/company/sociedades360" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Sociedades360" class="inline-flex w-10 h-10 items-center justify-center rounded-xl bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 text-slate-500 dark:text-slate-300 hover:text-ice hover:border-ice/40 transition">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77Z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/sociedades360" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Sociedades360" class="inline-flex w-10 h-10 items-center justify-center rounded-xl bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 text-slate-500 dark:text-slate-300 hover:text-ice hover:border-ice/40 transition">
           <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 01-1.38-.9 3.7 3.7 0 01-.9-1.38c-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16zm0 1.8c-3.15 0-3.5.01-4.74.07-1.14.05-1.76.24-2.17.4-.55.21-.94.47-1.35.88-.41.41-.67.8-.88 1.35-.16.41-.35 1.03-.4 2.17-.06 1.24-.07 1.6-.07 4.74s.01 3.5.07 4.74c.05 1.14.24 1.76.4 2.17.21.55.47.94.88 1.35.41.41.8.67 1.35.88.41.16 1.03.35 2.17.4 1.24.06 1.6.07 4.74.07s3.5-.01 4.74-.07c1.14-.05 1.76-.24 2.17-.4.55-.21.94-.47 1.35-.88.41-.41.67-.8.88-1.35.16-.41.35-1.03.4-2.17.06-1.24.07-1.6.07-4.74s-.01-3.5-.07-4.74c-.05-1.14-.24-1.76-.4-2.17a3.6 3.6 0 00-.88-1.35 3.6 3.6 0 00-1.35-.88c-.41-.16-1.03-.35-2.17-.4-1.24-.06-1.6-.07-4.74-.07zm0 3.06a5.98 5.98 0 110 11.96 5.98 5.98 0 010-11.96zm0 9.86a3.88 3.88 0 100-7.76 3.88 3.88 0 000 7.76zm7.6-10.09a1.4 1.4 0 11-2.8 0 1.4 1.4 0 012.8 0z" /></svg>
         </a>
+      </div>
       </div>
       <div>
         <h3 data-i18n="footer.nav_title" class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-4">Navegación</h3>

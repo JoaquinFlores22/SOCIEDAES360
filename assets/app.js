@@ -4,6 +4,21 @@
 
 const WHATSAPP = "5491159203177";
 
+/* ---- Google Ads: conversión "Contacto" ---------------------------------
+   La etiqueta base (gtag) la carga el <script> del <head> SOLO en
+   sociedades360.com.ar, así el demo del portfolio no ensucia la cuenta de
+   Ads del cliente. Acá disparamos el evento de conversión en cada apertura
+   de WhatsApp.
+   ⚠️ FALTA LA ETIQUETA REAL: reemplazar 'REEMPLAZAR_ETIQUETA' por la que da
+   Google Ads → Objetivos → Conversiones → acción "Contacto" → "Configurar
+   etiqueta" (queda como AW-18407054038/xxxxxxxxxxxxxxxxx). */
+const ADS_CONVERSION = "AW-18407054038/REEMPLAZAR_ETIQUETA";
+function trackContacto() {
+  if (typeof window.gtag !== "function") return; // no-op fuera de producción
+  window.gtag("event", "conversion", { send_to: ADS_CONVERSION });
+}
+window.trackContacto = trackContacto;
+
 /* ---- Tema (oscuro por defecto; el toggle guarda 'light'/'dark') ---------- */
 function initTheme() {
   const root = document.documentElement;
@@ -91,6 +106,7 @@ window.changeLanguage = changeLanguage;
 
 /* ---- WhatsApp helper (usado por las cards de servicios) ---------------- */
 window.contactService = (service) => {
+  trackContacto();
   const msg = `Hola Sociedades360, quiero consultar sobre: ${service}`;
   window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`, "_blank", "noopener");
 };
@@ -107,4 +123,9 @@ document.addEventListener("DOMContentLoaded", () => {
   initLangDropdown();
   initYear();
   changeLanguage(localStorage.getItem("preferred_lang") || "es");
+});
+
+// Cualquier click en un link a WhatsApp cuenta como conversión "Contacto".
+document.addEventListener("click", (e) => {
+  if (e.target.closest && e.target.closest('a[href*="wa.me/"]')) trackContacto();
 });

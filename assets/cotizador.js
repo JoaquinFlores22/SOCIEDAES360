@@ -8,6 +8,25 @@ const SHEETS_URL =
 const MIN_CAPITAL = { SAS: 704800, SRL: 300000, SA: 30000000 };
 const fmt = (n) => new Intl.NumberFormat("es-AR").format(n);
 
+/* ---- Filtro de actividad (objeto social) --------------------------------
+   La "Actividad principal" va al objeto social de la sociedad. Rechazamos
+   términos de actividades que la IGJ / DPPJ no inscribe. */
+const ACTIVIDAD_BLOQUEADA = [
+  "droga", "narcotraf", "estupefacient", "cocaina", "marihuana", "cannabis",
+  "arma de fuego", "armas de fuego", "municion", "explosiv",
+  "trata de persona", "explotacion sexual", "prostitu", "pornografia infantil",
+  "sicario", "asesinato", "secuestro", "extorsion",
+  "lavado de dinero", "lavado de activos", "esquema ponzi", "estafa piramidal",
+  "contrabando", "trafico de organos", "venta de organos",
+];
+const normaliza = (s) => s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+function actividadPermitida(texto) {
+  const t = normaliza(texto || "");
+  return !ACTIVIDAD_BLOQUEADA.some((p) => t.includes(p));
+}
+window.cerrarModalCompliance = () =>
+  document.getElementById("compliance-modal")?.classList.add("hidden");
+
 const data = {
   society: "",
   jurisdiction: "",
@@ -90,9 +109,14 @@ function nextStep() {
   if (step === 2) {
     const min = MIN_CAPITAL[data.society] || 0;
     if (data.capital < min) return;
+    const activity = document.getElementById("activity")?.value || "";
+    if (!actividadPermitida(activity)) {
+      document.getElementById("compliance-modal")?.classList.remove("hidden");
+      return;
+    }
     data.partners = document.getElementById("partners")?.value || 1;
     data.managers = document.getElementById("managers")?.value || 1;
-    data.activity = document.getElementById("activity")?.value || "";
+    data.activity = activity;
   }
   if (step < 3) goToStep(step + 1);
 }
@@ -147,6 +171,7 @@ function sendWhatsApp() {
   }
   Object.assign(data, { name, phone, email });
   saveLead();
+  if (typeof window.trackContacto === "function") window.trackContacto();
 
   const msg = encodeURIComponent(
     `Hola Sociedades360! 👋\n\n${document.getElementById("summary")?.value || ""}\n\n` +
