@@ -44,7 +44,8 @@ let step = 1;
 function selectOption(el, key, value) {
   if (!el) return;
   el.parentElement.querySelectorAll(".option-card").forEach((c) => c.classList.remove("is-active"));
-  el.classList.add("is-active");
+  el.classList.add("is-active", "is-popping");
+  el.addEventListener("animationend", () => el.classList.remove("is-popping"), { once: true });
   data[key] = value;
   refreshStep1Button();
 }
@@ -180,7 +181,20 @@ function sendWhatsApp() {
     `Hola Sociedades360! 👋\n\n${document.getElementById("summary")?.value || ""}\n\n` +
       `👤 ${data.name}\n📱 ${data.phone}\n✉️ ${data.email}`
   );
-  window.open(`https://wa.me/${WA}?text=${msg}`, "_blank", "noopener");
+
+  // Confirmación visual (los campos se "asientan" y el botón muestra el check)
+  // antes de abrir WhatsApp — ver #step3.is-confirming en src/input.css.
+  const step3 = document.getElementById("step3");
+  const btn = document.getElementById("sendBtn");
+  step3?.classList.add("is-confirming");
+  btn?.classList.add("is-sent");
+  window.setTimeout(() => {
+    window.open(`https://wa.me/${WA}?text=${msg}`, "_blank", "noopener");
+  }, 260);
+  window.setTimeout(() => {
+    step3?.classList.remove("is-confirming");
+    btn?.classList.remove("is-sent");
+  }, 1600);
 }
 window.sendWhatsApp = sendWhatsApp;
 

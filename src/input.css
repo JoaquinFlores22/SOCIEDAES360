@@ -102,6 +102,85 @@
   .option-card.is-active .check-dot {
     opacity: 1;
   }
+  /* pequeño "pop" al elegir una card (JS agrega/saca la clase) */
+  @keyframes option-pop {
+    40% { transform: scale(0.97); }
+  }
+  .option-card.is-popping {
+    animation: option-pop 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  /* Reveal al scroll: fade + rise, el JS solo togglea .is-visible */
+  [data-reveal] {
+    opacity: 0;
+    transform: translateY(22px);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  [data-reveal].is-visible {
+    opacity: 1;
+    transform: none;
+  }
+  [data-reveal-group] > [data-reveal]:nth-child(2) { transition-delay: 90ms; }
+  [data-reveal-group] > [data-reveal]:nth-child(3) { transition-delay: 180ms; }
+  [data-reveal-group] > [data-reveal]:nth-child(4) { transition-delay: 270ms; }
+
+  /* Entrada del hero de index.html: se anima sola al cargar, sin JS */
+  .hero-in > * {
+    opacity: 0;
+    animation: hero-rise 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+  .hero-in > *:nth-child(1) { animation-delay: 0.05s; }
+  .hero-in > *:nth-child(2) { animation-delay: 0.15s; }
+  .hero-in > *:nth-child(3) { animation-delay: 0.25s; }
+  .hero-in > *:nth-child(4) { animation-delay: 0.35s; }
+  .hero-in > *:nth-child(5) { animation-delay: 0.45s; }
+  @keyframes hero-rise {
+    from { opacity: 0; transform: translateY(18px); }
+    to { opacity: 1; transform: none; }
+  }
+
+  /* Confirmación al enviar el cotizador (paso 3, ver assets/cotizador.js) */
+  #step3.is-confirming .field-block {
+    animation: field-settle 0.46s cubic-bezier(0.2, 0.7, 0.2, 1) forwards;
+    pointer-events: none;
+  }
+  #step3.is-confirming .field-block:nth-of-type(2) { animation-delay: 60ms; }
+  #step3.is-confirming .field-block:nth-of-type(3) { animation-delay: 120ms; }
+  @keyframes field-settle {
+    to { opacity: 0.35; transform: scale(0.98) translateY(4px); }
+  }
+  #sendBtn .send-btn__check {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    opacity: 0;
+    transform: scale(0.4);
+    transition: opacity 0.25s ease, transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+  #sendBtn .send-btn__check svg {
+    width: 22px;
+    height: 22px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 30;
+    stroke-dashoffset: 30;
+    transition: stroke-dashoffset 0.4s ease 0.1s;
+  }
+  #sendBtn.is-sent .send-btn__label {
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+  #sendBtn.is-sent .send-btn__check {
+    opacity: 1;
+    transform: scale(1);
+  }
+  #sendBtn.is-sent .send-btn__check svg {
+    stroke-dashoffset: 0;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

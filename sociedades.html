@@ -187,17 +187,22 @@
           <!-- Paso 3 -->
           <div id="step3" class="hidden space-y-5">
             <p data-i18n="form_p.contact_badge" class="text-[11px] font-black uppercase tracking-widest text-slate-400">Datos de contacto</p>
-            <div class="grid gap-4 sm:grid-cols-2">
+            <div class="field-block grid gap-4 sm:grid-cols-2">
               <input id="userName" type="text" data-i18n="form_p.name_placeholder" placeholder="Nombre completo" class="w-full rounded-xl bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 px-4 py-3.5 outline-none focus:border-ice" />
               <input id="userPhone" type="tel" placeholder="WhatsApp: +54 9 11..." class="w-full rounded-xl bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 px-4 py-3.5 outline-none focus:border-ice" />
             </div>
-            <input id="userEmail" type="email" data-i18n="form_p.email_placeholder" placeholder="Email / Gmail" class="w-full rounded-xl bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 px-4 py-3.5 outline-none focus:border-ice" />
-            <div>
+            <input id="userEmail" type="email" data-i18n="form_p.email_placeholder" placeholder="Email / Gmail" class="field-block w-full rounded-xl bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 px-4 py-3.5 outline-none focus:border-ice" />
+            <div class="field-block">
               <label for="summary" data-i18n="form_p.summary_label" class="text-[11px] uppercase tracking-widest text-slate-400">Resumen de solicitud</label>
               <textarea id="summary" readonly rows="6" class="mt-1.5 w-full rounded-xl bg-slate-100 dark:bg-ink border border-slate-200 dark:border-white/10 px-4 py-3.5 text-xs text-slate-600 dark:text-slate-300 resize-none focus:outline-none"></textarea>
             </div>
             <div class="flex flex-col gap-3">
-              <button type="button" onclick="sendWhatsApp()" data-i18n="form_p.send_btn" class="w-full bg-ice text-regal py-4 rounded-xl font-black uppercase tracking-widest shadow-lg hover:opacity-90 transition">Enviar por WhatsApp</button>
+              <button type="button" id="sendBtn" onclick="sendWhatsApp()" class="relative w-full bg-ice text-regal py-4 rounded-xl font-black uppercase tracking-widest shadow-lg hover:opacity-90 transition overflow-hidden">
+                <span class="send-btn__label" data-i18n="form_p.send_btn">Enviar por WhatsApp</span>
+                <span class="send-btn__check" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6" /></svg>
+                </span>
+              </button>
               <button type="button" onclick="prevStep()" data-i18n="form_p.modify_data" class="text-[11px] font-black uppercase tracking-widest text-slate-400 hover:text-ice">Modificar datos</button>
             </div>
           </div>

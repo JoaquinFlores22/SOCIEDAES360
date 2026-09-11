@@ -40,6 +40,7 @@
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2306113F'/%3E%3Ctext x='32' y='43' font-family='Arial,Helvetica,sans-serif' font-size='30' font-weight='800' fill='%2338BDF8' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E" />
   <link rel="preload" href="fonts/inter-var-latin.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="css/style.css" />
+  <noscript><style>[data-reveal]{opacity:1!important;transform:none!important;}</style></noscript>
 
   <script type="application/ld+json">
   {
@@ -136,18 +137,18 @@
 
     <!-- VALORES -->
     <section class="bg-white dark:bg-surface border-y border-slate-200 dark:border-white/10">
-      <div class="max-w-content mx-auto px-6 py-20 md:py-24 grid gap-10 md:grid-cols-3">
-        <div>
+      <div class="max-w-content mx-auto px-6 py-20 md:py-24 grid gap-10 md:grid-cols-3" data-reveal-group>
+        <div data-reveal>
           <div class="w-12 h-12 rounded-xl bg-ice/15 text-ice grid place-items-center text-2xl">🛡️</div>
           <h2 data-i18n="about_p.val_title_1" class="mt-5 text-xl font-bold text-regal dark:text-white">Confianza transparente</h2>
           <p data-i18n="about_p.val_desc_1" class="mt-2 text-sm text-slate-600 dark:text-slate-300 leading-relaxed">Eliminamos la "letra chica". Cada paso del asesoramiento es claro, directo y honesto.</p>
         </div>
-        <div>
+        <div data-reveal>
           <div class="w-12 h-12 rounded-xl bg-ice/15 text-ice grid place-items-center text-2xl">⚡</div>
           <h2 data-i18n="about_p.val_title_2" class="mt-5 text-xl font-bold text-regal dark:text-white">Velocidad tecnológica</h2>
           <p data-i18n="about_p.val_desc_2" class="mt-2 text-sm text-slate-600 dark:text-slate-300 leading-relaxed">Herramientas digitales de última generación para reducir los tiempos de espera de semanas a días.</p>
         </div>
-        <div>
+        <div data-reveal>
           <div class="w-12 h-12 rounded-xl bg-ice/15 text-ice grid place-items-center text-2xl">🎯</div>
           <h2 data-i18n="about_p.val_title_3" class="mt-5 text-xl font-bold text-regal dark:text-white">Enfoque personalizado</h2>
           <p data-i18n="about_p.val_desc_3" class="mt-2 text-sm text-slate-600 dark:text-slate-300 leading-relaxed">Cada cliente es un proyecto único. No vendemos formularios: creamos soluciones a medida.</p>
@@ -159,7 +160,7 @@
     <section class="relative overflow-hidden bg-regal dark:bg-ink">
       <div class="pointer-events-none absolute -bottom-40 right-0 w-[500px] h-[500px] rounded-full bg-ice/10 blur-[130px]"></div>
       <div class="relative max-w-3xl mx-auto px-6 py-24 md:py-28 text-center">
-        <blockquote data-i18n="about_p.mission" class="text-3xl md:text-4xl font-black tracking-tight italic leading-snug text-white">
+        <blockquote data-i18n="about_p.mission" data-reveal class="text-3xl md:text-4xl font-black tracking-tight italic leading-snug text-white">
           "Nuestra misión es que lo legal deje de ser un obstáculo y se convierta en una ventaja competitiva."
         </blockquote>
         <div class="mx-auto mt-8 h-1 w-16 rounded-full bg-ice"></div>
