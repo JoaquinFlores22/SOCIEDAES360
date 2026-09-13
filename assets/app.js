@@ -28,7 +28,10 @@ function initTheme() {
   const paint = () => {
     const dark = root.classList.contains("dark");
     document.querySelectorAll("[data-theme-toggle]").forEach((b) => {
-      b.textContent = dark ? "☀️" : "🌙";
+      // El botón del menú mobile tiene hijos (ícono + texto + switch) además del
+      // emoji, así que el emoji vive en [data-theme-icon] y solo se pisa eso.
+      const icon = b.querySelector("[data-theme-icon]") || b;
+      icon.textContent = dark ? "☀️" : "🌙";
       b.setAttribute("aria-label", dark ? "Activar modo claro" : "Activar modo oscuro");
     });
   };
