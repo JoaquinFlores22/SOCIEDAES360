@@ -3,7 +3,7 @@
 
 const WA = "5491159203177";
 const SHEETS_URL =
-  "https://script.google.com/macros/s/AKfycbwP9FmcBtRq-Snp2h9Tq7tZcPDFfrbIjWkBJs7Q74PMor6nomaKr2OrGMxYk-dywzKagw/exec";
+  "https://script.google.com/macros/s/AKfycbzEsgu_aO-8Shdkbk8UNSdqvfE3OWJ-ftDuc9m20f0exgo0uGxjHaLo1qIZ9vhtcAtQew/exec";
 
 const MIN_CAPITAL = { SAS: 704800, SRL: 300000, SA: 30000000 };
 const fmt = (n) => new Intl.NumberFormat("es-AR").format(n);
